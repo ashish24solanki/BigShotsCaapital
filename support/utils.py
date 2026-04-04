@@ -54,6 +54,7 @@ def resample_ohlc(df: pd.DataFrame, timeframe: str):
     if "date" in df.columns:
         df["date"] = pd.to_datetime(df["date"])
         df = df.set_index("date")
+    df = df.sort_index()
 
     ohlc_dict = {
         "open": "first",
@@ -69,9 +70,16 @@ def resample_ohlc(df: pd.DataFrame, timeframe: str):
     elif timeframe in ["M", "ME"]:
         timeframe = "ME"      # Month ends on calendar month
 
+    # 🔴 FIX: REMOVE FUTURE / INCOMPLETE DATA
+
     resampled = df.resample(timeframe).agg(ohlc_dict)
     resampled = resampled[resampled['close'].notna()]   # only drop fully empty
+    if timeframe.startswith("W") and len(resampled) > 1:
+        resampled = resampled.iloc[:-1]
     resampled = resampled.reset_index()
+    # 🔴 CRITICAL FIX: REMOVE PARTIAL LAST CANDLE
+    # ✅ DROP ONLY WEEKLY LAST CANDLE (NOT MONTHLY)
+    
 
     return resampled
 
@@ -97,7 +105,36 @@ def calculate_multi_tf_rsi(df: pd.DataFrame, period: int = 14):
     # Monthly RSI
     monthly = resample_ohlc(df, "ME")
     if monthly is not None and not monthly.empty:
-        monthly[f"rsi{period}"] = calculate_rsi_tv(monthly["close"], period)
+        ##########################################################################
+        # 🔴 FIX: Monthly RSI using DAILY RSI (Chartink style)
+
+        # 🔴 FIX: Monthly RSI using DAILY RSI (Chartink style)
+
+        # Ensure date column exists
+        if "date" not in df.columns:
+            df = df.reset_index()
+
+        df_local = df.copy()
+        df_local["date"] = pd.to_datetime(df_local["date"])
+        monthly["date"] = pd.to_datetime(monthly["date"])
+
+        # Daily RSI
+        daily_rsi = calculate_rsi_tv(df_local["close"], period)
+
+        monthly_rsi = []
+
+        for m_date in monthly["date"]:
+            subset = df_local[df_local["date"] <= m_date]
+
+            if len(subset) >= period:
+                val = daily_rsi.iloc[:len(subset)].iloc[-1]
+            else:
+                val = np.nan
+
+            monthly_rsi.append(val)
+
+        monthly[f"rsi{period}"] = monthly_rsi
+    ##################################################################################
     result["monthly"] = monthly
 
     return result

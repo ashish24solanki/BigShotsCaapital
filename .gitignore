@@ -1,0 +1,3 @@
+__pycache__/
+*.pyc
+support/debug_swing.py
