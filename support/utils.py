@@ -31,14 +31,14 @@ def calculate_rsi_tv(series, period=10):
     loss = -delta.clip(upper=0)
 
     # Use ewm for very short series (more forgiving)
-    avg_gain = gain.ewm(alpha=1/period, adjust=False, min_periods=period).mean()
-    avg_loss = loss.ewm(alpha=1/period, adjust=False, min_periods=period).mean()
+    avg_gain = gain.ewm(alpha=1/period, adjust=False, min_periods=1).mean()
+    avg_loss = loss.ewm(alpha=1/period, adjust=False, min_periods=1).mean()
 
-    rs = avg_gain / avg_loss
+    rs = avg_gain / avg_loss.replace(0, np.nan)
     rsi = 100 - (100 / (1 + rs))
 
     # Fill initial NaNs with simple method if needed
-    rsi = rsi.fillna(method='bfill') if rsi.isna().all() else rsi
+    rsi = rsi.bfill() if rsi.isna().all() else rsi
     return rsi
 
 # =====================================================
@@ -55,7 +55,7 @@ def resample_ohlc(df: pd.DataFrame, timeframe: str):
         df["date"] = pd.to_datetime(df["date"])
         df = df.set_index("date")
     df = df.sort_index()
-
+    
     ohlc_dict = {
         "open": "first",
         "high": "max",
@@ -74,13 +74,12 @@ def resample_ohlc(df: pd.DataFrame, timeframe: str):
 
     resampled = df.resample(timeframe).agg(ohlc_dict)
     resampled = resampled[resampled['close'].notna()]   # only drop fully empty
-    if timeframe.startswith("W") and len(resampled) > 1:
-        resampled = resampled.iloc[:-1]
+    #if timeframe.startswith("W") and len(resampled) > 1:
+        #resampled = resampled.iloc[:-1]
     resampled = resampled.reset_index()
+    resampled = resampled.sort_values("date")
     # 🔴 CRITICAL FIX: REMOVE PARTIAL LAST CANDLE
-    # ✅ DROP ONLY WEEKLY LAST CANDLE (NOT MONTHLY)
-    
-
+    # ✅ DROP ONLY WEEKLY LAST CANDLE (NOT MONTHLY)  
     return resampled
 
 #==============MULTI-TIMEFRAME RSI================================
@@ -90,7 +89,6 @@ def calculate_multi_tf_rsi(df: pd.DataFrame, period: int = 14):
     """
 
     result = {}
-
     # Daily RSI
     daily = df.copy()
     daily[f"rsi{period}"] = calculate_rsi_tv(daily["close"], period)
@@ -111,8 +109,9 @@ def calculate_multi_tf_rsi(df: pd.DataFrame, period: int = 14):
         # 🔴 FIX: Monthly RSI using DAILY RSI (Chartink style)
 
         # Ensure date column exists
-        if "date" not in df.columns:
-            df = df.reset_index()
+        df_local = df.copy()
+        if "date" not in df_local.columns:
+            df_local = df_local.reset_index()
 
         df_local = df.copy()
         df_local["date"] = pd.to_datetime(df_local["date"])
@@ -127,7 +126,7 @@ def calculate_multi_tf_rsi(df: pd.DataFrame, period: int = 14):
             subset = df_local[df_local["date"] <= m_date]
 
             if len(subset) >= period:
-                val = daily_rsi.iloc[:len(subset)].iloc[-1]
+                val = daily_rsi.iloc[subset.index[-1]]
             else:
                 val = np.nan
 
