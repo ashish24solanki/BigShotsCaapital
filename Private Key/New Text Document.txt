@@ -1,0 +1,3 @@
+sk-ecdsa-sha2-nistp256@openssh.com AAAAInNrLWVjZHNhLXNoYTItbmlzdHAyNTZAb3BlbnNzaC5jb20AAAAIbmlzdHAyNTYAAABBBOiTzpFgXWSsnYWuOc/qr8fFgEjzyTdzDEpXKGpriYrHrGnw4Ia4FBlf3ZltOVVfvcNxTkDnFaljZ68jHdsIG8YAAAAHVGVybWl1cw== #ssh.id - @bigshots
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNXO8HqClt2xrwkKS0i3QdGblms2uBSd9KJPGCoom562jVBB0MkAtw6wF5zwhYnHvc8tLQhMNyk4iDjvXsBP8eM=
+ #ssh.id - @bigshots

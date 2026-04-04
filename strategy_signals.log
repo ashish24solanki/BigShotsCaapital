@@ -1,0 +1,108 @@
+
+============================================================
+STRATEGY RUN @ 2026-01-30 01:07:56
+
+📈 MOMENTUM – ACTIVE
+JSWSTEEL | Buy > 1217.72 | SL 1134.94
+KARURVYSYA | Buy > 294.74 | SL 263.43
+VEDL | Buy > 708.06 | SL 629.73
+
+📉 DIVERGENCE – ACTIVE SETUPS
+ACMESOLAR | Buy > 218.17 | SL 202.13
+BEML | Buy > 1836.83 | SL 1631.16
+COCHINSHIP | Buy > 1633.63 | SL 1406.34
+DATAPATTNS | Buy > 2652.65 | SL 2355.3
+GAIL | Buy > 168.84 | SL 156.96
+MAZDOCK | Buy > 2516.51 | SL 2269.08
+OLECTRA | Buy > 1094.79 | SL 1022.76
+SYRMA | Buy > 729.13 | SL 637.34
+
+SUMMARY
+Momentum trades : 3
+Divergence setups : 8
+Time : 2026-01-30 01:07:56
+Excel exported: strategy_state_today.xlsx
+REPORT COMPLETED CLEANLY
+
+============================================================
+STRATEGY RUN @ 2026-01-30 01:12:24
+
+📈 MOMENTUM – ACTIVE
+JSWSTEEL | Buy > 1217.72 | SL 1134.94
+KARURVYSYA | Buy > 294.74 | SL 263.43
+VEDL | Buy > 708.06 | SL 629.73
+
+📉 DIVERGENCE – ACTIVE SETUPS
+ACMESOLAR | Buy > 218.17 | SL 202.13
+BEML | Buy > 1836.83 | SL 1631.16
+COCHINSHIP | Buy > 1633.63 | SL 1406.34
+DATAPATTNS | Buy > 2652.65 | SL 2355.3
+GAIL | Buy > 168.84 | SL 156.96
+MAZDOCK | Buy > 2516.51 | SL 2269.08
+OLECTRA | Buy > 1094.79 | SL 1022.76
+SYRMA | Buy > 729.13 | SL 637.34
+
+SUMMARY
+Momentum trades : 3
+Divergence setups : 8
+Time : 2026-01-30 01:12:24
+Excel exported: strategy_state_today.xlsx
+REPORT COMPLETED CLEANLY
+
+============================================================
+ENGINE START @ 2026-01-30 01:17:02
+Momentum engine executed
+Divergence engine executed
+
+📈 MOMENTUM – ACTIVE
+JSWSTEEL | Buy > 1217.72 | SL 1144.93
+KARURVYSYA | Buy > 294.74 | SL 264.6
+VEDL | Buy > 708.06 | SL 662.85
+APLAPOLLO | Buy > 2099.1 | SL 1856.97
+BSE | Buy > 2832.83 | SL 2571.03
+COALINDIA | Buy > 446.4 | SL 407.43
+CUB | Buy > 294.79 | SL 258.39
+GESHIP | Buy > 1191.69 | SL 1054.35
+GRAPHITE | Buy > 665.66 | SL 581.53
+HINDALCO | Buy > 1008.91 | SL 864.9
+HINDCOPPER | Buy > 643.64 | SL 515.52
+IOC | Buy > 164.16 | SL 153.22
+JINDALSTEL | Buy > 1123.12 | SL 987.13
+MCX | Buy > 2607.6 | SL 2222.55
+MRPL | Buy > 169.76 | SL 142.51
+NATIONALUM | Buy > 408.31 | SL 342.23
+NTPC | Buy > 353.6 | SL 330.36
+OIL | Buy > 497.0 | SL 412.2
+ONGC | Buy > 269.92 | SL 229.34
+PETRONET | Buy > 292.29 | SL 267.2
+SBIN | Buy > 1066.67 | SL 943.51
+TATASTEEL | Buy > 195.4 | SL 179.07
+TECHM | Buy > 1767.47 | SL 1556.01
+TVSMOTOR | Buy > 3752.75 | SL 3472.43
+UNIONBANK | Buy > 182.64 | SL 161.34
+
+📉 DIVERGENCE – ACTIVE SETUPS
+ACMESOLAR | Buy > 218.17 | SL 202.13
+APARINDS | Buy > 7856.85 | SL 6886.35
+BEML | Buy > 1835.73 | SL 1636.02
+CENTURYPLY | Buy > 790.79 | SL 702.95
+CGPOWER | Buy > 593.54 | SL 531.0
+COCHINSHIP | Buy > 1656.65 | SL 1467.9
+DATAPATTNS | Buy > 2646.94 | SL 2347.2
+DCMSHRIRAM | Buy > 1196.8 | SL 1062.99
+GAIL | Buy > 172.12 | SL 156.96
+LT | Buy > 3964.86 | SL 3682.9
+MAZDOCK | Buy > 2539.44 | SL 2260.47
+MINDACORP | Buy > 572.57 | SL 517.5
+OLECTRA | Buy > 1093.99 | SL 1016.73
+SAMMAANCAP | Buy > 148.75 | SL 135.58
+SIEMENS | Buy > 3122.02 | SL 2797.74
+STARHEALTH | Buy > 460.36 | SL 412.38
+SYRMA | Buy > 736.84 | SL 651.56
+
+SUMMARY
+Momentum trades   : 25
+Divergence setups : 17
+Time              : 2026-01-30 01:17:02
+Excel exported: strategy_state_today.xlsx
+ENGINE COMPLETED CLEANLY

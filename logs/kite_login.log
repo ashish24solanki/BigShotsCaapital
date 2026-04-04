@@ -1,0 +1,2089 @@
+2026-02-09 20:53:45,240 | INFO | Script loaded
+2026-02-09 20:53:45,243 | INFO | Script execution started
+2026-02-09 20:53:45,243 | INFO | Initializing KiteConnect
+2026-02-09 20:53:45,243 | INFO | Access token file found
+2026-02-09 20:53:45,243 | INFO | Trying cached token
+2026-02-09 20:53:45,720 | INFO | Login to Kite successful (cached token)
+2026-02-09 20:53:45,721 | INFO | Script execution finished
+2026-02-09 20:56:20,773 | INFO | Script loaded
+2026-02-09 20:56:20,774 | INFO | Script execution started
+2026-02-09 20:56:20,774 | INFO | Initializing KiteConnect
+2026-02-09 20:56:20,774 | INFO | Access token file found
+2026-02-09 20:56:20,774 | INFO | Trying cached token
+2026-02-09 20:56:21,406 | INFO | Login to Kite successful (cached token)
+2026-02-09 20:56:21,406 | INFO | Fetching all orders from Kite
+2026-02-09 20:56:21,862 | INFO | Total orders fetched: 21
+2026-02-09 20:56:21,863 | INFO | Filtering orders for today: 2026-02-09
+2026-02-09 20:59:14,162 | INFO | Script loaded
+2026-02-09 20:59:14,162 | INFO | Script execution started
+2026-02-09 20:59:14,163 | INFO | Initializing KiteConnect
+2026-02-09 20:59:14,163 | INFO | Access token file found
+2026-02-09 20:59:14,163 | INFO | Trying cached token
+2026-02-09 20:59:14,606 | INFO | Login to Kite successful (cached token)
+2026-02-09 20:59:14,607 | INFO | Fetching all orders from Kite
+2026-02-09 20:59:14,776 | INFO | Total orders fetched: 21
+2026-02-09 20:59:14,777 | INFO | Filtering orders for today: 2026-02-09
+2026-02-09 20:59:14,777 | INFO | Today's orders count: 21
+2026-02-09 20:59:14,777 | INFO | ORDER -> id=260209170046028 | symbol=TITAN | type=BUY | status=COMPLETE | qty=11
+2026-02-09 20:59:14,777 | INFO | ORDER -> id=260209170046467 | symbol=ADANIPORTS | type=BUY | status=COMPLETE | qty=25
+2026-02-09 20:59:14,777 | INFO | ORDER -> id=260209170045464 | symbol=BSE | type=BUY | status=COMPLETE | qty=11
+2026-02-09 20:59:14,777 | INFO | ORDER -> id=260209170053433 | symbol=BHARATFORG | type=BUY | status=COMPLETE | qty=25
+2026-02-09 20:59:14,777 | INFO | ORDER -> id=260209170062696 | symbol=KARURVYSYA | type=BUY | status=COMPLETE | qty=100
+2026-02-09 20:59:14,777 | INFO | ORDER -> id=260209170054401 | symbol=NYKAA | type=BUY | status=COMPLETE | qty=145
+2026-02-09 20:59:14,778 | INFO | ORDER -> id=260209170045973 | symbol=KTKBANK | type=BUY | status=COMPLETE | qty=85
+2026-02-09 20:59:14,778 | INFO | ORDER -> id=260209170044685 | symbol=PFC | type=BUY | status=COMPLETE | qty=90
+2026-02-09 20:59:14,778 | INFO | ORDER -> id=260209170091690 | symbol=CEATLTD | type=BUY | status=COMPLETE | qty=8
+2026-02-09 20:59:14,778 | INFO | ORDER -> id=260209170093735 | symbol=CHENNPETRO | type=BUY | status=COMPLETE | qty=30
+2026-02-09 20:59:14,778 | INFO | ORDER -> id=260209170118057 | symbol=MFSL | type=BUY | status=COMPLETE | qty=26
+2026-02-09 20:59:14,778 | INFO | ORDER -> id=260209170134884 | symbol=MRPL | type=BUY | status=COMPLETE | qty=75
+2026-02-09 20:59:14,779 | INFO | ORDER -> id=260209170220647 | symbol=JKTYRE | type=BUY | status=COMPLETE | qty=60
+2026-02-09 20:59:14,779 | INFO | ORDER -> id=260209170448118 | symbol=KEI | type=BUY | status=REJECTED | qty=8
+2026-02-09 20:59:14,779 | INFO | ORDER -> id=260209170464837 | symbol=IFCI | type=BUY | status=REJECTED | qty=425
+2026-02-09 20:59:14,779 | INFO | ORDER -> id=260209170044230 | symbol=SBIN | type=BUY | status=CANCELLED | qty=22
+2026-02-09 20:59:14,779 | INFO | ORDER -> id=260209170923712 | symbol=BPCL | type=SELL | status=COMPLETE | qty=55
+2026-02-09 20:59:14,779 | INFO | ORDER -> id=260209170924203 | symbol=IRCTC | type=SELL | status=COMPLETE | qty=14
+2026-02-09 20:59:14,779 | INFO | ORDER -> id=260209170924635 | symbol=ITCHOTELS | type=SELL | status=COMPLETE | qty=6
+2026-02-09 20:59:14,779 | INFO | ORDER -> id=260209171053925 | symbol=ASHOKLEY | type=BUY | status=COMPLETE | qty=200
+2026-02-09 20:59:14,780 | INFO | ORDER -> id=260209171415432 | symbol=TORNTPOWER | type=BUY | status=COMPLETE | qty=13
+2026-02-09 20:59:14,780 | INFO | Script execution finished
+2026-02-09 21:05:21,999 | INFO | Script loaded
+2026-02-09 21:05:21,999 | INFO | Script execution started
+2026-02-09 21:05:21,999 | INFO | Initializing KiteConnect
+2026-02-09 21:05:21,999 | INFO | Access token file found
+2026-02-09 21:05:22,000 | INFO | Trying cached token
+2026-02-09 21:05:22,416 | INFO | Login to Kite successful (cached token)
+2026-02-09 21:05:22,416 | INFO | Fetching all orders from Kite
+2026-02-09 21:05:22,550 | INFO | Total orders fetched: 21
+2026-02-09 21:05:22,556 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 21:05:22,556 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 21:05:22,556 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,556 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,556 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,556 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,556 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,556 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE
+2026-02-09 21:05:22,557 | INFO | Script execution finished
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE
+2026-02-09 | INFO | Script execution finished
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Script execution finished
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Script execution finished
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Script execution finished
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Script execution finished
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Reading symbols from portfolio DB
+2026-02-09 | INFO | DB symbols count: 62
+2026-02-09 | INFO | DB CHECK -> AARTIIND : TRUE
+2026-02-09 | INFO | DB CHECK -> ABB : TRUE
+2026-02-09 | INFO | DB CHECK -> ACMESOLAR : TRUE
+2026-02-09 | INFO | DB CHECK -> APLAPOLLO : TRUE
+2026-02-09 | INFO | DB CHECK -> ASHOKLEY : TRUE
+2026-02-09 | INFO | DB CHECK -> AXISBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> BANKBEES : TRUE
+2026-02-09 | INFO | DB CHECK -> BEL : TRUE
+2026-02-09 | INFO | DB CHECK -> BEML : FALSE
+2026-02-09 | INFO | DB CHECK -> BPCL : TRUE
+2026-02-09 | INFO | DB CHECK -> BSOFT : TRUE
+2026-02-09 | INFO | DB CHECK -> CCL : TRUE
+2026-02-09 | INFO | DB CHECK -> CHOLAFIN : TRUE
+2026-02-09 | INFO | DB CHECK -> COALINDIA : TRUE
+2026-02-09 | INFO | DB CHECK -> CUB : TRUE
+2026-02-09 | INFO | DB CHECK -> DATAPATTNS : TRUE
+2026-02-09 | INFO | DB CHECK -> DLF : TRUE
+2026-02-09 | INFO | DB CHECK -> ECLERX : FALSE
+2026-02-09 | INFO | DB CHECK -> FEDERALBNK : TRUE
+2026-02-09 | INFO | DB CHECK -> GAIL : TRUE
+2026-02-09 | INFO | DB CHECK -> GESHIP : TRUE
+2026-02-09 | INFO | DB CHECK -> GVT&D : TRUE
+2026-02-09 | INFO | DB CHECK -> HCLTECH : TRUE
+2026-02-09 | INFO | DB CHECK -> HINDCOPPER : TRUE
+2026-02-09 | INFO | DB CHECK -> ICICIBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> IDBI : TRUE
+2026-02-09 | INFO | DB CHECK -> IOC : TRUE
+2026-02-09 | INFO | DB CHECK -> IRCTC : TRUE
+2026-02-09 | INFO | DB CHECK -> IREDA : TRUE
+2026-02-09 | INFO | DB CHECK -> ITCHOTELS : TRUE
+2026-02-09 | INFO | DB CHECK -> JKTYRE : TRUE
+2026-02-09 | INFO | DB CHECK -> KARURVYSYA : TRUE
+2026-02-09 | INFO | DB CHECK -> KTKBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> LENSKART : TRUE
+2026-02-09 | INFO | DB CHECK -> M&M : TRUE
+2026-02-09 | INFO | DB CHECK -> MAZDOCK : TRUE
+2026-02-09 | INFO | DB CHECK -> MID150BEES : TRUE
+2026-02-09 | INFO | DB CHECK -> MRPL : TRUE
+2026-02-09 | INFO | DB CHECK -> NAVINFLUOR : TRUE
+2026-02-09 | INFO | DB CHECK -> NESTLEIND : TRUE
+2026-02-09 | INFO | DB CHECK -> NIFTYBEES : TRUE
+2026-02-09 | INFO | DB CHECK -> NMDC : TRUE
+2026-02-09 | INFO | DB CHECK -> NTPC : TRUE
+2026-02-09 | INFO | DB CHECK -> OIL : TRUE
+2026-02-09 | INFO | DB CHECK -> OLECTRA : TRUE
+2026-02-09 | INFO | DB CHECK -> ONGC : TRUE
+2026-02-09 | INFO | DB CHECK -> PETRONET : TRUE
+2026-02-09 | INFO | DB CHECK -> POWERGRID : TRUE
+2026-02-09 | INFO | DB CHECK -> RAINBOW : TRUE
+2026-02-09 | INFO | DB CHECK -> SBIN : TRUE
+2026-02-09 | INFO | DB CHECK -> SYRMA : TRUE
+2026-02-09 | INFO | DB CHECK -> TATACONSUM : TRUE
+2026-02-09 | INFO | DB CHECK -> TATASTEEL : TRUE
+2026-02-09 | INFO | DB CHECK -> TECHM : TRUE
+2026-02-09 | INFO | DB CHECK -> TMCV : TRUE
+2026-02-09 | INFO | DB CHECK -> TMPV : TRUE
+2026-02-09 | INFO | DB CHECK -> TORNTPOWER : TRUE
+2026-02-09 | INFO | DB CHECK -> TVSMOTOR : TRUE
+2026-02-09 | INFO | DB CHECK -> UNIONBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> VIKASECO : TRUE
+2026-02-09 | INFO | DB CHECK -> VIKASLIFE : TRUE
+2026-02-09 | INFO | DB CHECK -> YESBANK : TRUE
+2026-02-09 | INFO | Script execution finished
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Reading symbols from portfolio DB
+2026-02-09 | INFO | DB symbols count: 62
+2026-02-09 | INFO | DB CHECK -> AARTIIND : TRUE
+2026-02-09 | INFO | DB CHECK -> ABB : TRUE
+2026-02-09 | INFO | DB CHECK -> ACMESOLAR : TRUE
+2026-02-09 | INFO | DB CHECK -> APLAPOLLO : TRUE
+2026-02-09 | INFO | DB CHECK -> ASHOKLEY : TRUE
+2026-02-09 | INFO | DB CHECK -> AXISBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> BANKBEES : TRUE
+2026-02-09 | INFO | DB CHECK -> BEL : TRUE
+2026-02-09 | INFO | DB CHECK -> BEML : FALSE | DELETING
+2026-02-09 | INFO | DB CHECK -> BPCL : TRUE
+2026-02-09 | INFO | DB CHECK -> BSOFT : TRUE
+2026-02-09 | INFO | DB CHECK -> CCL : TRUE
+2026-02-09 | INFO | DB CHECK -> CHOLAFIN : TRUE
+2026-02-09 | INFO | DB CHECK -> COALINDIA : TRUE
+2026-02-09 | INFO | DB CHECK -> CUB : TRUE
+2026-02-09 | INFO | DB CHECK -> DATAPATTNS : TRUE
+2026-02-09 | INFO | DB CHECK -> DLF : TRUE
+2026-02-09 | INFO | DB CHECK -> ECLERX : FALSE | DELETING
+2026-02-09 | INFO | DB CHECK -> FEDERALBNK : TRUE
+2026-02-09 | INFO | DB CHECK -> GAIL : TRUE
+2026-02-09 | INFO | DB CHECK -> GESHIP : TRUE
+2026-02-09 | INFO | DB CHECK -> GVT&D : TRUE
+2026-02-09 | INFO | DB CHECK -> HCLTECH : TRUE
+2026-02-09 | INFO | DB CHECK -> HINDCOPPER : TRUE
+2026-02-09 | INFO | DB CHECK -> ICICIBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> IDBI : TRUE
+2026-02-09 | INFO | DB CHECK -> IOC : TRUE
+2026-02-09 | INFO | DB CHECK -> IRCTC : TRUE
+2026-02-09 | INFO | DB CHECK -> IREDA : TRUE
+2026-02-09 | INFO | DB CHECK -> ITCHOTELS : TRUE
+2026-02-09 | INFO | DB CHECK -> JKTYRE : TRUE
+2026-02-09 | INFO | DB CHECK -> KARURVYSYA : TRUE
+2026-02-09 | INFO | DB CHECK -> KTKBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> LENSKART : TRUE
+2026-02-09 | INFO | DB CHECK -> M&M : TRUE
+2026-02-09 | INFO | DB CHECK -> MAZDOCK : TRUE
+2026-02-09 | INFO | DB CHECK -> MID150BEES : TRUE
+2026-02-09 | INFO | DB CHECK -> MRPL : TRUE
+2026-02-09 | INFO | DB CHECK -> NAVINFLUOR : TRUE
+2026-02-09 | INFO | DB CHECK -> NESTLEIND : TRUE
+2026-02-09 | INFO | DB CHECK -> NIFTYBEES : TRUE
+2026-02-09 | INFO | DB CHECK -> NMDC : TRUE
+2026-02-09 | INFO | DB CHECK -> NTPC : TRUE
+2026-02-09 | INFO | DB CHECK -> OIL : TRUE
+2026-02-09 | INFO | DB CHECK -> OLECTRA : TRUE
+2026-02-09 | INFO | DB CHECK -> ONGC : TRUE
+2026-02-09 | INFO | DB CHECK -> PETRONET : TRUE
+2026-02-09 | INFO | DB CHECK -> POWERGRID : TRUE
+2026-02-09 | INFO | DB CHECK -> RAINBOW : TRUE
+2026-02-09 | INFO | DB CHECK -> SBIN : TRUE
+2026-02-09 | INFO | DB CHECK -> SYRMA : TRUE
+2026-02-09 | INFO | DB CHECK -> TATACONSUM : TRUE
+2026-02-09 | INFO | DB CHECK -> TATASTEEL : TRUE
+2026-02-09 | INFO | DB CHECK -> TECHM : TRUE
+2026-02-09 | INFO | DB CHECK -> TMCV : TRUE
+2026-02-09 | INFO | DB CHECK -> TMPV : TRUE
+2026-02-09 | INFO | DB CHECK -> TORNTPOWER : TRUE
+2026-02-09 | INFO | DB CHECK -> TVSMOTOR : TRUE
+2026-02-09 | INFO | DB CHECK -> UNIONBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> VIKASECO : TRUE
+2026-02-09 | INFO | DB CHECK -> VIKASLIFE : TRUE
+2026-02-09 | INFO | DB CHECK -> YESBANK : TRUE
+2026-02-09 | INFO | Script execution finished
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-09 | INFO | DB CHECK -> ACMESOLAR : TRUE
+2026-02-09 | INFO | DB CHECK -> TECHM : TRUE
+2026-02-09 | INFO | DB CHECK -> GVT&D : TRUE
+2026-02-09 | INFO | DB CHECK -> TVSMOTOR : TRUE
+2026-02-09 | INFO | DB CHECK -> DLF : TRUE
+2026-02-09 | INFO | DB CHECK -> AXISBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> IRCTC : TRUE
+2026-02-09 | INFO | DB CHECK -> GAIL : TRUE
+2026-02-09 | INFO | DB CHECK -> TATACONSUM : TRUE
+2026-02-09 | INFO | DB CHECK -> TMCV : TRUE
+2026-02-09 | INFO | DB CHECK -> ABB : TRUE
+2026-02-09 | INFO | DB CHECK -> HINDCOPPER : TRUE
+2026-02-09 | INFO | DB CHECK -> CHOLAFIN : TRUE
+2026-02-09 | INFO | DB CHECK -> CUB : TRUE
+2026-02-09 | INFO | DB CHECK -> FEDERALBNK : TRUE
+2026-02-09 | INFO | DB CHECK -> AARTIIND : TRUE
+2026-02-09 | INFO | DB CHECK -> MAZDOCK : TRUE
+2026-02-09 | INFO | DB CHECK -> NMDC : TRUE
+2026-02-09 | INFO | DB CHECK -> ITCHOTELS : TRUE
+2026-02-09 | INFO | DB CHECK -> LENSKART : TRUE
+2026-02-09 | INFO | DB CHECK -> BEL : TRUE
+2026-02-09 | INFO | DB CHECK -> PETRONET : TRUE
+2026-02-09 | INFO | DB CHECK -> BANKBEES : TRUE
+2026-02-09 | INFO | DB CHECK -> MRPL : TRUE
+2026-02-09 | INFO | DB CHECK -> COALINDIA : TRUE
+2026-02-09 | INFO | DB CHECK -> ASHOKLEY : TRUE
+2026-02-09 | INFO | DB CHECK -> DATAPATTNS : TRUE
+2026-02-09 | INFO | DB CHECK -> JKTYRE : TRUE
+2026-02-09 | INFO | DB CHECK -> TORNTPOWER : TRUE
+2026-02-09 | INFO | DB CHECK -> IDBI : TRUE
+2026-02-09 | INFO | DB CHECK -> SYRMA : TRUE
+2026-02-09 | INFO | DB CHECK -> TATASTEEL : TRUE
+2026-02-09 | INFO | DB CHECK -> ICICIBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> M&M : TRUE
+2026-02-09 | INFO | DB CHECK -> POWERGRID : TRUE
+2026-02-09 | INFO | DB CHECK -> ONGC : TRUE
+2026-02-09 | INFO | DB CHECK -> CCL : TRUE
+2026-02-09 | INFO | DB CHECK -> NESTLEIND : TRUE
+2026-02-09 | INFO | DB CHECK -> RAINBOW : TRUE
+2026-02-09 | INFO | DB CHECK -> GESHIP : TRUE
+2026-02-09 | INFO | DB CHECK -> BSOFT : TRUE
+2026-02-09 | INFO | DB CHECK -> IREDA : TRUE
+2026-02-09 | INFO | DB CHECK -> KARURVYSYA : TRUE
+2026-02-09 | INFO | DB CHECK -> KTKBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> BPCL : TRUE
+2026-02-09 | INFO | DB CHECK -> MID150BEES : TRUE
+2026-02-09 | INFO | DB CHECK -> NIFTYBEES : TRUE
+2026-02-09 | INFO | DB CHECK -> VIKASLIFE : TRUE
+2026-02-09 | INFO | DB CHECK -> YESBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> OLECTRA : TRUE
+2026-02-09 | INFO | DB CHECK -> NTPC : TRUE
+2026-02-09 | INFO | DB CHECK -> TMPV : TRUE
+2026-02-09 | INFO | DB CHECK -> UNIONBANK : TRUE
+2026-02-09 | INFO | DB CHECK -> VIKASECO : TRUE
+2026-02-09 | INFO | DB CHECK -> HCLTECH : TRUE
+2026-02-09 | INFO | DB CHECK -> SBIN : TRUE
+2026-02-09 | INFO | DB CHECK -> OIL : TRUE
+2026-02-09 | INFO | DB CHECK -> IOC : TRUE
+2026-02-09 | INFO | DB CHECK -> APLAPOLLO : TRUE
+2026-02-09 | INFO | DB CHECK -> NAVINFLUOR : TRUE
+2026-02-09 | INFO | DB ADD -> NYKAA | entry_date=2026-02-09
+2026-02-09 | INFO | DB ADD -> PFC | entry_date=2026-02-09
+2026-02-09 | INFO | DB ADD -> ADANIPORTS | entry_date=2026-02-09
+2026-02-09 | INFO | DB ADD -> TITAN | entry_date=2026-02-09
+2026-02-09 | INFO | DB ADD -> CEATLTD | entry_date=2026-02-09
+2026-02-09 | INFO | DB ADD -> BSE | entry_date=2026-02-09
+2026-02-09 | INFO | DB ADD -> MFSL | entry_date=2026-02-09
+2026-02-09 | INFO | DB ADD -> CHENNPETRO | entry_date=2026-02-09
+2026-02-09 | INFO | DB ADD -> BHARATFORG | entry_date=2026-02-09
+2026-02-09 | INFO | Script execution finished
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-09 | INFO | DB CHECK -> PFC : TRUE
+2026-02-09 | INFO | DB CHECK -> TMCV : TRUE
+2026-02-09 | INFO | DB CHECK -> MFSL : TRUE
+2026-02-09 | INFO | DB CHECK -> HCLTECH : TRUE
+2026-02-09 | INFO | DB CHECK -> CEATLTD : TRUE
+2026-02-09 | INFO | DB CHECK -> CHOLAFIN : TRUE
+2026-02-09 | INFO | DB CHECK -> BHARATFORG : TRUE
+2026-02-09 | INFO | DB CHECK -> ADANIPORTS : TRUE
+2026-02-09 | INFO | DB CHECK -> LENSKART : TRUE
+2026-02-09 | INFO | DB CHECK -> TITAN : TRUE
+2026-02-09 | INFO | DB CHECK -> BSE : TRUE
+2026-02-09 | INFO | DB CHECK -> NYKAA : TRUE
+2026-02-09 | INFO | DB CHECK -> CHENNPETRO : TRUE
+2026-02-09 | INFO | DB ADD -> KARURVYSYA | entry_date=2026-02-09
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Script execution started
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-09 | INFO | DB CHECK -> CEATLTD : TRUE
+2026-02-09 | INFO | DB CHECK -> ADANIPORTS : TRUE
+2026-02-09 | INFO | DB CHECK -> HCLTECH : TRUE
+2026-02-09 | INFO | DB CHECK -> CHOLAFIN : TRUE
+2026-02-09 | INFO | DB CHECK -> BSE : TRUE
+2026-02-09 | INFO | DB CHECK -> TITAN : TRUE
+2026-02-09 | INFO | DB CHECK -> PFC : TRUE
+2026-02-09 | INFO | DB CHECK -> NYKAA : TRUE
+2026-02-09 | INFO | DB CHECK -> LENSKART : TRUE
+2026-02-09 | INFO | DB CHECK -> TMCV : TRUE
+2026-02-09 | INFO | DB CHECK -> CHENNPETRO : TRUE
+2026-02-09 | INFO | DB CHECK -> MFSL : TRUE
+2026-02-09 | INFO | DB CHECK -> BHARATFORG : TRUE
+2026-02-09 | INFO | DB ADD -> KARURVYSYA | entry_date=2026-02-09
+2026-02-09 | INFO | Script loaded
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token file found
+2026-02-09 | INFO | Trying cached token
+2026-02-09 | INFO | Login to Kite successful (cached token)
+2026-02-09 | INFO | DB SKIP -> TITAN already present in DB | pyramiding_count +1
+2026-02-09 | INFO | Login successful (cached token)
+2026-02-09 | INFO | DB PYR UPDATE -> TITAN | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> ADANIPORTS | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> BSE | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> BHARATFORG | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> KARURVYSYA | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> NYKAA | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> KTKBANK | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> PFC | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> CEATLTD | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> CHENNPETRO | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> MFSL | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> MRPL | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> JKTYRE | pyramiding_count +1
+2026-02-09 | INFO | DB EXIT -> BPCL | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> IRCTC | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> ITCHOTELS | exit_date=2026-02-09
+2026-02-09 | INFO | DB PYR UPDATE -> ASHOKLEY | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> TORNTPOWER | pyramiding_count +1
+2026-02-09 | INFO | ========== SCRIPT START ==========
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token found, trying cached login
+2026-02-09 | INFO | Login successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-09 | INFO | DB symbols fetched: 69
+2026-02-09 | INFO | DB PYR SKIP -> TITAN | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> ADANIPORTS | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> BSE | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> BHARATFORG | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> KARURVYSYA | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> NYKAA | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> KTKBANK | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> PFC | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> CEATLTD | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> CHENNPETRO | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> MFSL | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> MRPL | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> JKTYRE | already pyramided today
+2026-02-09 | INFO | DB EXIT -> BPCL | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> IRCTC | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> ITCHOTELS | exit_date=2026-02-09
+2026-02-09 | INFO | DB PYR SKIP -> ASHOKLEY | already pyramided today
+2026-02-09 | INFO | DB PYR SKIP -> TORNTPOWER | already pyramided today
+2026-02-09 | INFO | Active DB symbols count: 13
+2026-02-09 | INFO | DB sync completed
+2026-02-09 | INFO | ========== SCRIPT END ==========
+2026-02-09 | INFO | ========== SCRIPT START ==========
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token found, trying cached login
+2026-02-09 | INFO | Login successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-09 | INFO | DB symbols fetched: 69
+2026-02-09 | INFO | DB PYR UPDATE -> TITAN | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> ADANIPORTS | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> BSE | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> BHARATFORG | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> KARURVYSYA | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> NYKAA | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> KTKBANK | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> PFC | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> CEATLTD | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> CHENNPETRO | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> MFSL | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> MRPL | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> JKTYRE | pyramiding_count +1
+2026-02-09 | INFO | DB EXIT -> BPCL | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> IRCTC | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> ITCHOTELS | exit_date=2026-02-09
+2026-02-09 | INFO | DB PYR UPDATE -> ASHOKLEY | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> TORNTPOWER | pyramiding_count +1
+2026-02-09 | INFO | Active DB symbols count: 66
+2026-02-09 | INFO | DB sync completed
+2026-02-09 | INFO | ========== SCRIPT END ==========
+2026-02-09 | INFO | ========== SCRIPT START ==========
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token found, trying cached login
+2026-02-09 | INFO | Login successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-09 | INFO | DB symbols fetched: 69
+2026-02-09 | INFO | DB PYR SKIP -> TITAN | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> ADANIPORTS | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> BSE | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> BHARATFORG | entry_date is today
+2026-02-09 | INFO | DB PYR UPDATE -> KARURVYSYA | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB PYR SKIP -> NYKAA | entry_date is today
+2026-02-09 | INFO | DB PYR UPDATE -> KTKBANK | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB PYR SKIP -> PFC | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> CEATLTD | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> CHENNPETRO | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> MFSL | entry_date is today
+2026-02-09 | INFO | DB PYR UPDATE -> MRPL | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> JKTYRE | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB EXIT -> BPCL | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> IRCTC | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> ITCHOTELS | exit_date=2026-02-09
+2026-02-09 | INFO | DB PYR UPDATE -> ASHOKLEY | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> TORNTPOWER | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB sync completed
+2026-02-09 | INFO | ========== SCRIPT END ==========
+2026-02-09 | INFO | ========== SCRIPT START ==========
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Login successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Starting SL calculation from DB symbols
+2026-02-09 | INFO | [SL] NO CHANGE -> HINDCOPPER | SL 684.0
+2026-02-09 | INFO | [SL] NO CHANGE -> GVT&D | SL 3197.0
+2026-02-09 | INFO | [SL] NO CHANGE -> MAZDOCK | SL 2315.6
+2026-02-09 | INFO | [SL] NO CHANGE -> APLAPOLLO | SL 1978.2
+2026-02-09 | INFO | [SL] NO CHANGE -> TATASTEEL | SL 182.1
+2026-02-09 | INFO | [SL] NO CHANGE -> COALINDIA | SL 410.2
+2026-02-09 | INFO | [SL] NO CHANGE -> NESTLEIND | SL 1249.7
+2026-02-09 | INFO | [SL] NO CHANGE -> VIKASLIFE | SL 1.6
+2026-02-09 | INFO | [SL] NO CHANGE -> NAVINFLUOR | SL 5775.8
+2026-02-09 | INFO | [SL] NO CHANGE -> IREDA | SL 122.9
+2026-02-09 | INFO | [SL] NO CHANGE -> ONGC | SL 247.8
+2026-02-09 | INFO | [SL] NO CHANGE -> NIFTYBEES | SL 276.9
+2026-02-09 | INFO | [SL] NO CHANGE -> YESBANK | SL 20.5
+2026-02-09 | INFO | [SL] NO CHANGE -> CUB | SL 271.6
+2026-02-09 | INFO | [SL] NO CHANGE -> GESHIP | SL 1146.8
+2026-02-09 | INFO | [SL] NO CHANGE -> TECHM | SL 1591.6
+2026-02-09 | INFO | [SL] NO CHANGE -> TMPV | SL 337.9
+2026-02-09 | INFO | [SL] NO CHANGE -> KARURVYSYA | SL 286.3
+2026-02-09 | INFO | [SL] NO CHANGE -> IOC | SL 158.2
+2026-02-09 | INFO | [SL] NO CHANGE -> TATACONSUM | SL 1068.7
+2026-02-09 | INFO | [SL] NO CHANGE -> BANKBEES | SL 590.7
+2026-02-09 | INFO | [SL] NO CHANGE -> ICICIBANK | SL 1315.3
+2026-02-09 | INFO | [SL] NO CHANGE -> DATAPATTNS | SL 2451.3
+2026-02-09 | INFO | [SL] NO CHANGE -> KTKBANK | SL 180.3
+2026-02-09 | INFO | [SL] NO CHANGE -> RAINBOW | SL 1079.1
+2026-02-09 | INFO | [SL] NO CHANGE -> MRPL | SL 166.7
+2026-02-09 | INFO | [SL] NO CHANGE -> VIKASECO | SL 1.5
+2026-02-09 | INFO | [SL] NO CHANGE -> OLECTRA | SL 979.6
+2026-02-09 | INFO | [SL] NO CHANGE -> TORNTPOWER | SL 1286.1
+2026-02-09 | INFO | [SL] NO CHANGE -> M&M | SL 3250.0
+2026-02-09 | INFO | [SL] NO CHANGE -> POWERGRID | SL 263.5
+2026-02-09 | INFO | [SL] NO CHANGE -> UNIONBANK | SL 163.7
+2026-02-09 | INFO | [SL] NO CHANGE -> FEDERALBNK | SL 259.0
+2026-02-09 | INFO | [SL] NO CHANGE -> SBIN | SL 978.4
+2026-02-09 | INFO | [SL] NO CHANGE -> ASHOKLEY | SL 183.7
+2026-02-09 | INFO | [SL] NO CHANGE -> DLF | SL 597.4
+2026-02-09 | INFO | [SL] NO CHANGE -> NTPC | SL 333.7
+2026-02-09 | INFO | [SL] NO CHANGE -> ACMESOLAR | SL 205.9
+2026-02-09 | INFO | [SL] NO CHANGE -> GAIL | SL 151.5
+2026-02-09 | INFO | [SL] NO CHANGE -> SYRMA | SL 781.7
+2026-02-09 | INFO | [SL] NO CHANGE -> OIL | SL 463.3
+2026-02-09 | INFO | [SL] NO CHANGE -> MID150BEES | SL 211.6
+2026-02-09 | INFO | [SL] NO CHANGE -> PETRONET | SL 270.1
+2026-02-09 | INFO | [SL] NO CHANGE -> AXISBANK | SL 1265.6
+2026-02-09 | INFO | [SL] NO CHANGE -> TVSMOTOR | SL 3461.0
+2026-02-09 | INFO | [SL] NO CHANGE -> BEL | SL 407.7
+2026-02-09 | INFO | [SL] NO CHANGE -> JKTYRE | SL 491.9
+2026-02-09 | INFO | [SL] NO CHANGE -> CCL | SL 902.6
+2026-02-09 | INFO | [SL] NO CHANGE -> ABB | SL 5234.4
+2026-02-09 | INFO | [SL] NO CHANGE -> NMDC | SL 77.3
+2026-02-09 | INFO | [SL] NO CHANGE -> BSOFT | SL 414.5
+2026-02-09 | INFO | [SL] NO CHANGE -> IDBI | SL 98.2
+2026-02-09 | INFO | [SL] NO CHANGE -> AARTIIND | SL 408.2
+2026-02-09 | INFO | [SL] SKIP -> TMCV | insufficient candles
+2026-02-09 | INFO | [SL] SKIP -> LENSKART | insufficient candles
+2026-02-09 | INFO | [SL] NO CHANGE -> HCLTECH | SL 1558.4
+2026-02-09 | INFO | [SL] NO CHANGE -> CHOLAFIN | SL 1568.0
+2026-02-09 | INFO | [SL] NO CHANGE -> NYKAA | SL nan
+2026-02-09 | INFO | [SL] NO CHANGE -> PFC | SL nan
+2026-02-09 | INFO | [SL] NO CHANGE -> ADANIPORTS | SL nan
+2026-02-09 | INFO | [SL] NO CHANGE -> TITAN | SL nan
+2026-02-09 | INFO | [SL] NO CHANGE -> CEATLTD | SL nan
+2026-02-09 | INFO | [SL] NO CHANGE -> BSE | SL nan
+2026-02-09 | INFO | [SL] NO CHANGE -> MFSL | SL nan
+2026-02-09 | INFO | [SL] NO CHANGE -> CHENNPETRO | SL nan
+2026-02-09 | INFO | [SL] NO CHANGE -> BHARATFORG | SL nan
+2026-02-09 | INFO | ========== SCRIPT END ==========
+2026-02-09 | INFO | ========== SCRIPT START ==========
+2026-02-09 | INFO | Initializing KiteConnect
+2026-02-09 | INFO | Access token found, trying cached login
+2026-02-09 | INFO | Login successful (cached token)
+2026-02-09 | INFO | Fetching all orders from Kite
+2026-02-09 | INFO | Total orders fetched: 21
+2026-02-09 | INFO | Filtering COMPLETE orders for today: 2026-02-09
+2026-02-09 | INFO | Today's COMPLETE orders count: 18
+2026-02-09 | INFO | ORDER -> symbol=TITAN | type=BUY | status=COMPLETE | price=4167.0
+2026-02-09 | INFO | ORDER -> symbol=ADANIPORTS | type=BUY | status=COMPLETE | price=1580.0
+2026-02-09 | INFO | ORDER -> symbol=BSE | type=BUY | status=COMPLETE | price=2935.0
+2026-02-09 | INFO | ORDER -> symbol=BHARATFORG | type=BUY | status=COMPLETE | price=1599.3
+2026-02-09 | INFO | ORDER -> symbol=KARURVYSYA | type=BUY | status=COMPLETE | price=323.0
+2026-02-09 | INFO | ORDER -> symbol=NYKAA | type=BUY | status=COMPLETE | price=281.8
+2026-02-09 | INFO | ORDER -> symbol=KTKBANK | type=BUY | status=COMPLETE | price=206.3
+2026-02-09 | INFO | ORDER -> symbol=PFC | type=BUY | status=COMPLETE | price=426.3
+2026-02-09 | INFO | ORDER -> symbol=CEATLTD | type=BUY | status=COMPLETE | price=3983.0
+2026-02-09 | INFO | ORDER -> symbol=CHENNPETRO | type=BUY | status=COMPLETE | price=920.0
+2026-02-09 | INFO | ORDER -> symbol=MFSL | type=BUY | status=COMPLETE | price=1715.8
+2026-02-09 | INFO | ORDER -> symbol=MRPL | type=BUY | status=COMPLETE | price=191.7
+2026-02-09 | INFO | ORDER -> symbol=JKTYRE | type=BUY | status=COMPLETE | price=556.5
+2026-02-09 | INFO | ORDER -> symbol=BPCL | type=SELL | status=COMPLETE | price=388.2
+2026-02-09 | INFO | ORDER -> symbol=IRCTC | type=SELL | status=COMPLETE | price=624.1
+2026-02-09 | INFO | ORDER -> symbol=ITCHOTELS | type=SELL | status=COMPLETE | price=182.1
+2026-02-09 | INFO | ORDER -> symbol=ASHOKLEY | type=BUY | status=COMPLETE | price=205.7
+2026-02-09 | INFO | ORDER -> symbol=TORNTPOWER | type=BUY | status=COMPLETE | price=1440.7
+2026-02-09 | INFO | Fetching holdings from Kite
+2026-02-09 | INFO | Total holdings fetched: 60
+2026-02-09 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-09 | INFO | HOLDING -> symbol=ABB
+2026-02-09 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-09 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-09 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-09 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-09 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-09 | INFO | HOLDING -> symbol=BEL
+2026-02-09 | INFO | HOLDING -> symbol=BPCL
+2026-02-09 | INFO | HOLDING -> symbol=BSOFT
+2026-02-09 | INFO | HOLDING -> symbol=CCL
+2026-02-09 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-09 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-09 | INFO | HOLDING -> symbol=CUB
+2026-02-09 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-09 | INFO | HOLDING -> symbol=DLF
+2026-02-09 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-09 | INFO | HOLDING -> symbol=GAIL
+2026-02-09 | INFO | HOLDING -> symbol=GESHIP
+2026-02-09 | INFO | HOLDING -> symbol=GVT&D
+2026-02-09 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-09 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-09 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-09 | INFO | HOLDING -> symbol=IDBI
+2026-02-09 | INFO | HOLDING -> symbol=IOC
+2026-02-09 | INFO | HOLDING -> symbol=IRCTC
+2026-02-09 | INFO | HOLDING -> symbol=IREDA
+2026-02-09 | INFO | HOLDING -> symbol=ITCHOTELS
+2026-02-09 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-09 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-09 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-09 | INFO | HOLDING -> symbol=LENSKART
+2026-02-09 | INFO | HOLDING -> symbol=M&M
+2026-02-09 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-09 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-09 | INFO | HOLDING -> symbol=MRPL
+2026-02-09 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-09 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-09 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-09 | INFO | HOLDING -> symbol=NMDC
+2026-02-09 | INFO | HOLDING -> symbol=NTPC
+2026-02-09 | INFO | HOLDING -> symbol=OIL
+2026-02-09 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-09 | INFO | HOLDING -> symbol=ONGC
+2026-02-09 | INFO | HOLDING -> symbol=PETRONET
+2026-02-09 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-09 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-09 | INFO | HOLDING -> symbol=SBIN
+2026-02-09 | INFO | HOLDING -> symbol=SYRMA
+2026-02-09 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-09 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-09 | INFO | HOLDING -> symbol=TECHM
+2026-02-09 | INFO | HOLDING -> symbol=TMCV
+2026-02-09 | INFO | HOLDING -> symbol=TMPV
+2026-02-09 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-09 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-09 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-09 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-09 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-09 | INFO | HOLDING -> symbol=YESBANK
+2026-02-09 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-09 | INFO | DB symbols fetched: 69
+2026-02-09 | INFO | DB PYR SKIP -> TITAN | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> ADANIPORTS | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> BSE | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> BHARATFORG | entry_date is today
+2026-02-09 | INFO | DB PYR UPDATE -> KARURVYSYA | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB PYR SKIP -> NYKAA | entry_date is today
+2026-02-09 | INFO | DB PYR UPDATE -> KTKBANK | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB PYR SKIP -> PFC | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> CEATLTD | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> CHENNPETRO | entry_date is today
+2026-02-09 | INFO | DB PYR SKIP -> MFSL | entry_date is today
+2026-02-09 | INFO | DB PYR UPDATE -> MRPL | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> JKTYRE | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB EXIT -> BPCL | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> IRCTC | exit_date=2026-02-09
+2026-02-09 | INFO | DB EXIT -> ITCHOTELS | exit_date=2026-02-09
+2026-02-09 | INFO | DB PYR UPDATE -> ASHOKLEY | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB PYR UPDATE -> TORNTPOWER | entry_date != today | pyramiding_count +1
+2026-02-09 | INFO | DB sync completed
+2026-02-09 | INFO | Starting SL calculation from DB symbols
+2026-02-09 | INFO | [SL] NO CHANGE -> HINDCOPPER | SL 684.0
+2026-02-09 | INFO | [SL] NO CHANGE -> GVT&D | SL 3197.0
+2026-02-09 | INFO | [SL] NO CHANGE -> MAZDOCK | SL 2315.6
+2026-02-09 | INFO | [SL] NO CHANGE -> APLAPOLLO | SL 1978.2
+2026-02-09 | INFO | [SL] NO CHANGE -> TATASTEEL | SL 182.1
+2026-02-09 | INFO | [SL] NO CHANGE -> COALINDIA | SL 410.2
+2026-02-09 | INFO | [SL] NO CHANGE -> NESTLEIND | SL 1249.7
+2026-02-09 | INFO | [SL] NO CHANGE -> VIKASLIFE | SL 1.6
+2026-02-09 | INFO | [SL] NO CHANGE -> NAVINFLUOR | SL 5775.8
+2026-02-09 | INFO | [SL] NO CHANGE -> IREDA | SL 122.9
+2026-02-09 | INFO | [SL] NO CHANGE -> ONGC | SL 247.8
+2026-02-09 | INFO | [SL] NO CHANGE -> NIFTYBEES | SL 276.9
+2026-02-09 | INFO | [SL] NO CHANGE -> YESBANK | SL 20.5
+2026-02-09 | INFO | [SL] NO CHANGE -> CUB | SL 271.6
+2026-02-09 | INFO | [SL] NO CHANGE -> GESHIP | SL 1146.8
+2026-02-09 | INFO | [SL] NO CHANGE -> TECHM | SL 1591.6
+2026-02-09 | INFO | [SL] NO CHANGE -> TMPV | SL 337.9
+2026-02-09 | INFO | [SL] NO CHANGE -> KARURVYSYA | SL 286.3
+2026-02-09 | INFO | [SL] NO CHANGE -> IOC | SL 158.2
+2026-02-09 | INFO | [SL] NO CHANGE -> TATACONSUM | SL 1068.7
+2026-02-09 | INFO | [SL] NO CHANGE -> BANKBEES | SL 590.7
+2026-02-09 | INFO | [SL] NO CHANGE -> ICICIBANK | SL 1315.3
+2026-02-09 | INFO | [SL] NO CHANGE -> DATAPATTNS | SL 2451.3
+2026-02-09 | INFO | [SL] NO CHANGE -> KTKBANK | SL 180.3
+2026-02-09 | INFO | [SL] NO CHANGE -> RAINBOW | SL 1079.1
+2026-02-09 | INFO | [SL] NO CHANGE -> MRPL | SL 166.7
+2026-02-09 | INFO | [SL] NO CHANGE -> VIKASECO | SL 1.5
+2026-02-09 | INFO | [SL] NO CHANGE -> OLECTRA | SL 979.6
+2026-02-09 | INFO | [SL] NO CHANGE -> TORNTPOWER | SL 1286.1
+2026-02-09 | INFO | [SL] NO CHANGE -> M&M | SL 3250.0
+2026-02-09 | INFO | [SL] NO CHANGE -> POWERGRID | SL 263.5
+2026-02-09 | INFO | [SL] NO CHANGE -> UNIONBANK | SL 163.7
+2026-02-09 | INFO | [SL] NO CHANGE -> FEDERALBNK | SL 259.0
+2026-02-09 | INFO | [SL] NO CHANGE -> SBIN | SL 978.4
+2026-02-09 | INFO | [SL] NO CHANGE -> ASHOKLEY | SL 183.7
+2026-02-09 | INFO | [SL] NO CHANGE -> DLF | SL 597.4
+2026-02-09 | INFO | [SL] NO CHANGE -> NTPC | SL 333.7
+2026-02-09 | INFO | [SL] NO CHANGE -> ACMESOLAR | SL 205.9
+2026-02-09 | INFO | [SL] NO CHANGE -> GAIL | SL 151.5
+2026-02-09 | INFO | [SL] NO CHANGE -> SYRMA | SL 781.7
+2026-02-09 | INFO | [SL] NO CHANGE -> OIL | SL 463.3
+2026-02-09 | INFO | [SL] NO CHANGE -> MID150BEES | SL 211.6
+2026-02-09 | INFO | [SL] NO CHANGE -> PETRONET | SL 270.1
+2026-02-09 | INFO | [SL] NO CHANGE -> AXISBANK | SL 1265.6
+2026-02-09 | INFO | [SL] NO CHANGE -> TVSMOTOR | SL 3461.0
+2026-02-09 | INFO | [SL] NO CHANGE -> BEL | SL 407.7
+2026-02-09 | INFO | [SL] NO CHANGE -> JKTYRE | SL 491.9
+2026-02-09 | INFO | [SL] NO CHANGE -> CCL | SL 902.6
+2026-02-09 | INFO | [SL] NO CHANGE -> ABB | SL 5234.4
+2026-02-09 | INFO | [SL] NO CHANGE -> NMDC | SL 77.3
+2026-02-09 | INFO | [SL] NO CHANGE -> BSOFT | SL 414.5
+2026-02-09 | INFO | [SL] NO CHANGE -> IDBI | SL 98.2
+2026-02-09 | INFO | [SL] NO CHANGE -> AARTIIND | SL 408.2
+2026-02-09 | INFO | [SL] SKIP -> TMCV | insufficient candles
+2026-02-09 | INFO | [SL] SKIP -> LENSKART | insufficient candles
+2026-02-09 | INFO | [SL] NO CHANGE -> HCLTECH | SL 1558.4
+2026-02-09 | INFO | [SL] NO CHANGE -> CHOLAFIN | SL 1568.0
+2026-02-09 | INFO | [SL] INIT -> NYKAA | SL 249.3
+2026-02-09 | INFO | [SL] INIT -> PFC | SL 377.3
+2026-02-09 | INFO | [SL] INIT -> ADANIPORTS | SL 1413.2
+2026-02-09 | INFO | [SL] INIT -> TITAN | SL 3804.7
+2026-02-09 | INFO | [SL] INIT -> CEATLTD | SL 3571.7
+2026-02-09 | INFO | [SL] INIT -> BSE | SL 2607.3
+2026-02-09 | INFO | [SL] INIT -> MFSL | SL 1545.8
+2026-02-09 | INFO | [SL] INIT -> CHENNPETRO | SL 815.0
+2026-02-09 | INFO | [SL] INIT -> BHARATFORG | SL 1431.9
+2026-02-09 | INFO | ========== SCRIPT END ==========
+2026-02-10 | INFO | ========== SCRIPT START ==========
+2026-02-10 | INFO | Initializing KiteConnect
+2026-02-10 | INFO | Access token found, trying cached login
+2026-02-10 | INFO | Cached token invalid
+2026-02-10 | INFO | Opening Zerodha login URL
+2026-02-10 | INFO | Generating new session
+2026-02-10 | INFO | Login successful (new token)
+2026-02-10 | INFO | Fetching all orders from Kite
+2026-02-10 | INFO | Total orders fetched: 8
+2026-02-10 | INFO | Filtering COMPLETE orders for today: 2026-02-10
+2026-02-10 | INFO | Today's COMPLETE orders count: 2
+2026-02-10 | INFO | ORDER -> symbol=LT | type=BUY | status=COMPLETE | price=4130.0
+2026-02-10 | INFO | ORDER -> symbol=M&MFIN | type=BUY | status=COMPLETE | price=393.2
+2026-02-10 | INFO | Fetching holdings from Kite
+2026-02-10 | INFO | Total holdings fetched: 67
+2026-02-10 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-10 | INFO | HOLDING -> symbol=ABB
+2026-02-10 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-10 | INFO | HOLDING -> symbol=ADANIPORTS
+2026-02-10 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-10 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-10 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-10 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-10 | INFO | HOLDING -> symbol=BEL
+2026-02-10 | INFO | HOLDING -> symbol=BHARATFORG
+2026-02-10 | INFO | HOLDING -> symbol=BPCL
+2026-02-10 | INFO | HOLDING -> symbol=BSE
+2026-02-10 | INFO | HOLDING -> symbol=BSOFT
+2026-02-10 | INFO | HOLDING -> symbol=CCL
+2026-02-10 | INFO | HOLDING -> symbol=CEATLTD
+2026-02-10 | INFO | HOLDING -> symbol=CHENNPETRO
+2026-02-10 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-10 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-10 | INFO | HOLDING -> symbol=CUB
+2026-02-10 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-10 | INFO | HOLDING -> symbol=DLF
+2026-02-10 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-10 | INFO | HOLDING -> symbol=GAIL
+2026-02-10 | INFO | HOLDING -> symbol=GESHIP
+2026-02-10 | INFO | HOLDING -> symbol=GVT&D
+2026-02-10 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-10 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-10 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-10 | INFO | HOLDING -> symbol=IDBI
+2026-02-10 | INFO | HOLDING -> symbol=IOC
+2026-02-10 | INFO | HOLDING -> symbol=IREDA
+2026-02-10 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-10 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-10 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-10 | INFO | HOLDING -> symbol=LENSKART
+2026-02-10 | INFO | HOLDING -> symbol=M&M
+2026-02-10 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-10 | INFO | HOLDING -> symbol=MFSL
+2026-02-10 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-10 | INFO | HOLDING -> symbol=MRPL
+2026-02-10 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-10 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-10 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-10 | INFO | HOLDING -> symbol=NMDC
+2026-02-10 | INFO | HOLDING -> symbol=NTPC
+2026-02-10 | INFO | HOLDING -> symbol=NYKAA
+2026-02-10 | INFO | HOLDING -> symbol=OIL
+2026-02-10 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-10 | INFO | HOLDING -> symbol=ONGC
+2026-02-10 | INFO | HOLDING -> symbol=PETRONET
+2026-02-10 | INFO | HOLDING -> symbol=PFC
+2026-02-10 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-10 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-10 | INFO | HOLDING -> symbol=SBIN
+2026-02-10 | INFO | HOLDING -> symbol=SYRMA
+2026-02-10 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-10 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-10 | INFO | HOLDING -> symbol=TECHM
+2026-02-10 | INFO | HOLDING -> symbol=TITAN
+2026-02-10 | INFO | HOLDING -> symbol=TMCV
+2026-02-10 | INFO | HOLDING -> symbol=TMPV
+2026-02-10 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-10 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-10 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-10 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-10 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-10 | INFO | HOLDING -> symbol=YESBANK
+2026-02-10 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-10 | INFO | DB symbols fetched: 69
+2026-02-10 | INFO | DB sync completed
+2026-02-10 | INFO | Starting SL calculation from DB symbols
+2026-02-10 | INFO | [SL] NO CHANGE -> HINDCOPPER | SL 684.0
+2026-02-10 | INFO | [SL] TRAIL -> GVT&D | 3197.0 -> 3322.3
+2026-02-10 | INFO | [SL] NO CHANGE -> MAZDOCK | SL 2315.6
+2026-02-10 | INFO | [SL] TRAIL -> APLAPOLLO | 1978.2 -> 2011.1
+2026-02-10 | INFO | [SL] NO CHANGE -> TATASTEEL | SL 182.1
+2026-02-10 | INFO | [SL] NO CHANGE -> COALINDIA | SL 410.2
+2026-02-10 | INFO | [SL] NO CHANGE -> NESTLEIND | SL 1249.7
+2026-02-10 | INFO | [SL] NO CHANGE -> VIKASLIFE | SL 1.6
+2026-02-10 | INFO | [SL] TRAIL -> NAVINFLUOR | 5775.8 -> 5938.2
+2026-02-10 | INFO | [SL] NO CHANGE -> IREDA | SL 122.9
+2026-02-10 | INFO | [SL] NO CHANGE -> ONGC | SL 247.8
+2026-02-10 | INFO | [SL] NO CHANGE -> NIFTYBEES | SL 276.9
+2026-02-10 | INFO | [SL] TRAIL -> YESBANK | 20.5 -> 20.6
+2026-02-10 | INFO | [SL] NO CHANGE -> CUB | SL 271.6
+2026-02-10 | INFO | [SL] TRAIL -> GESHIP | 1146.8 -> 1181.9
+2026-02-10 | INFO | [SL] NO CHANGE -> TECHM | SL 1591.6
+2026-02-10 | INFO | [SL] TRAIL -> TMPV | 337.9 -> 339.7
+2026-02-10 | INFO | [SL] TRAIL -> KARURVYSYA | 286.3 -> 293.9
+2026-02-10 | INFO | [SL] TRAIL -> IOC | 158.2 -> 158.5
+2026-02-10 | INFO | [SL] NO CHANGE -> TATACONSUM | SL 1068.7
+2026-02-10 | INFO | [SL] NO CHANGE -> BANKBEES | SL 590.7
+2026-02-10 | INFO | [SL] TRAIL -> ICICIBANK | 1315.3 -> 1315.5
+2026-02-10 | INFO | [SL] TRAIL -> DATAPATTNS | 2451.3 -> 2524.6
+2026-02-10 | INFO | [SL] TRAIL -> KTKBANK | 180.3 -> 186.2
+2026-02-10 | INFO | [SL] NO CHANGE -> RAINBOW | SL 1079.1
+2026-02-10 | INFO | [SL] TRAIL -> MRPL | 166.7 -> 174.8
+2026-02-10 | INFO | [SL] NO CHANGE -> VIKASECO | SL 1.5
+2026-02-10 | INFO | [SL] TRAIL -> OLECTRA | 979.6 -> 984.5
+2026-02-10 | INFO | [SL] NO CHANGE -> TORNTPOWER | SL 1286.1
+2026-02-10 | INFO | [SL] NO CHANGE -> M&M | SL 3250.0
+2026-02-10 | INFO | [SL] NO CHANGE -> POWERGRID | SL 263.5
+2026-02-10 | INFO | [SL] NO CHANGE -> UNIONBANK | SL 163.7
+2026-02-10 | INFO | [SL] NO CHANGE -> FEDERALBNK | SL 259.0
+2026-02-10 | INFO | [SL] TRAIL -> SBIN | 978.4 -> 1031.4
+2026-02-10 | INFO | [SL] TRAIL -> ASHOKLEY | 183.7 -> 185.2
+2026-02-10 | INFO | [SL] TRAIL -> DLF | 597.4 -> 604.0
+2026-02-10 | INFO | [SL] TRAIL -> NTPC | 333.7 -> 334.1
+2026-02-10 | INFO | [SL] NO CHANGE -> ACMESOLAR | SL 205.9
+2026-02-10 | INFO | [SL] NO CHANGE -> GAIL | SL 151.5
+2026-02-10 | INFO | [SL] TRAIL -> SYRMA | 781.7 -> 784.9
+2026-02-10 | INFO | [SL] NO CHANGE -> OIL | SL 463.3
+2026-02-10 | INFO | [SL] NO CHANGE -> MID150BEES | SL 211.6
+2026-02-10 | INFO | [SL] TRAIL -> PETRONET | 270.1 -> 273.3
+2026-02-10 | INFO | [SL] TRAIL -> AXISBANK | 1265.6 -> 1289.9
+2026-02-10 | INFO | [SL] NO CHANGE -> TVSMOTOR | SL 3461.0
+2026-02-10 | INFO | [SL] NO CHANGE -> BEL | SL 407.7
+2026-02-10 | INFO | [SL] TRAIL -> JKTYRE | 491.9 -> 500.3
+2026-02-10 | INFO | [SL] TRAIL -> CCL | 902.6 -> 918.8
+2026-02-10 | INFO | [SL] NO CHANGE -> ABB | SL 5234.4
+2026-02-10 | INFO | [SL] TRAIL -> NMDC | 77.3 -> 77.6
+2026-02-10 | INFO | [SL] NO CHANGE -> BSOFT | SL 414.5
+2026-02-10 | INFO | [SL] NO CHANGE -> IDBI | SL 98.2
+2026-02-10 | INFO | [SL] TRAIL -> AARTIIND | 408.2 -> 423.4
+2026-02-10 | INFO | [SL] SKIP -> TMCV | insufficient candles
+2026-02-10 | INFO | [SL] SKIP -> LENSKART | insufficient candles
+2026-02-10 | INFO | [SL] NO CHANGE -> HCLTECH | SL 1558.4
+2026-02-10 | INFO | [SL] TRAIL -> CHOLAFIN | 1568.0 -> 1593.2
+2026-02-10 | INFO | [SL] TRAIL -> NYKAA | 249.3 -> 250.1
+2026-02-10 | INFO | [SL] NO CHANGE -> PFC | SL 377.3
+2026-02-10 | INFO | [SL] NO CHANGE -> ADANIPORTS | SL 1413.2
+2026-02-10 | INFO | [SL] TRAIL -> TITAN | 3804.7 -> 3832.0
+2026-02-10 | INFO | [SL] TRAIL -> CEATLTD | 3571.7 -> 3614.0
+2026-02-10 | INFO | [SL] TRAIL -> BSE | 2607.3 -> 2686.6
+2026-02-10 | INFO | [SL] TRAIL -> MFSL | 1545.8 -> 1577.9
+2026-02-10 | INFO | [SL] TRAIL -> CHENNPETRO | 815.0 -> 829.4
+2026-02-10 | INFO | [SL] NO CHANGE -> BHARATFORG | SL 1431.9
+2026-02-10 | INFO | ========== SCRIPT END ==========
+2026-02-10 | INFO | ========== SCRIPT START ==========
+2026-02-10 | INFO | Initializing KiteConnect
+2026-02-10 | INFO | Access token found, trying cached login
+2026-02-10 | INFO | Login successful (cached token)
+2026-02-10 | INFO | Fetching all orders from Kite
+2026-02-10 | INFO | Total orders fetched: 8
+2026-02-10 | INFO | Filtering COMPLETE orders for today: 2026-02-10
+2026-02-10 | INFO | Today's COMPLETE orders count: 2
+2026-02-10 | INFO | ORDER -> symbol=LT | type=BUY | status=COMPLETE | price=4130.0
+2026-02-10 | INFO | ORDER -> symbol=M&MFIN | type=BUY | status=COMPLETE | price=393.2
+2026-02-10 | INFO | Fetching holdings from Kite
+2026-02-10 | INFO | Total holdings fetched: 67
+2026-02-10 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-10 | INFO | HOLDING -> symbol=ABB
+2026-02-10 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-10 | INFO | HOLDING -> symbol=ADANIPORTS
+2026-02-10 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-10 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-10 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-10 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-10 | INFO | HOLDING -> symbol=BEL
+2026-02-10 | INFO | HOLDING -> symbol=BHARATFORG
+2026-02-10 | INFO | HOLDING -> symbol=BPCL
+2026-02-10 | INFO | HOLDING -> symbol=BSE
+2026-02-10 | INFO | HOLDING -> symbol=BSOFT
+2026-02-10 | INFO | HOLDING -> symbol=CCL
+2026-02-10 | INFO | HOLDING -> symbol=CEATLTD
+2026-02-10 | INFO | HOLDING -> symbol=CHENNPETRO
+2026-02-10 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-10 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-10 | INFO | HOLDING -> symbol=CUB
+2026-02-10 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-10 | INFO | HOLDING -> symbol=DLF
+2026-02-10 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-10 | INFO | HOLDING -> symbol=GAIL
+2026-02-10 | INFO | HOLDING -> symbol=GESHIP
+2026-02-10 | INFO | HOLDING -> symbol=GVT&D
+2026-02-10 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-10 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-10 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-10 | INFO | HOLDING -> symbol=IDBI
+2026-02-10 | INFO | HOLDING -> symbol=IOC
+2026-02-10 | INFO | HOLDING -> symbol=IREDA
+2026-02-10 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-10 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-10 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-10 | INFO | HOLDING -> symbol=LENSKART
+2026-02-10 | INFO | HOLDING -> symbol=M&M
+2026-02-10 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-10 | INFO | HOLDING -> symbol=MFSL
+2026-02-10 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-10 | INFO | HOLDING -> symbol=MRPL
+2026-02-10 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-10 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-10 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-10 | INFO | HOLDING -> symbol=NMDC
+2026-02-10 | INFO | HOLDING -> symbol=NTPC
+2026-02-10 | INFO | HOLDING -> symbol=NYKAA
+2026-02-10 | INFO | HOLDING -> symbol=OIL
+2026-02-10 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-10 | INFO | HOLDING -> symbol=ONGC
+2026-02-10 | INFO | HOLDING -> symbol=PETRONET
+2026-02-10 | INFO | HOLDING -> symbol=PFC
+2026-02-10 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-10 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-10 | INFO | HOLDING -> symbol=SBIN
+2026-02-10 | INFO | HOLDING -> symbol=SYRMA
+2026-02-10 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-10 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-10 | INFO | HOLDING -> symbol=TECHM
+2026-02-10 | INFO | HOLDING -> symbol=TITAN
+2026-02-10 | INFO | HOLDING -> symbol=TMCV
+2026-02-10 | INFO | HOLDING -> symbol=TMPV
+2026-02-10 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-10 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-10 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-10 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-10 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-10 | INFO | HOLDING -> symbol=YESBANK
+2026-02-10 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-10 | INFO | DB symbols fetched: 69
+2026-02-10 | INFO | DB sync completed
+2026-02-10 | INFO | Starting SL calculation from DB symbols
+2026-02-10 | INFO | [SL] NO CHANGE -> HINDCOPPER | SL 684.0
+2026-02-10 | INFO | [SL] NO CHANGE -> GVT&D | SL 3322.3
+2026-02-10 | INFO | [SL] NO CHANGE -> MAZDOCK | SL 2315.6
+2026-02-10 | INFO | [SL] NO CHANGE -> APLAPOLLO | SL 2011.1
+2026-02-10 | INFO | [SL] NO CHANGE -> TATASTEEL | SL 182.1
+2026-02-10 | INFO | [SL] NO CHANGE -> COALINDIA | SL 410.2
+2026-02-10 | INFO | [SL] NO CHANGE -> NESTLEIND | SL 1249.7
+2026-02-10 | INFO | [SL] NO CHANGE -> VIKASLIFE | SL 1.6
+2026-02-10 | INFO | [SL] NO CHANGE -> NAVINFLUOR | SL 5938.2
+2026-02-10 | INFO | [SL] NO CHANGE -> IREDA | SL 122.9
+2026-02-10 | INFO | [SL] NO CHANGE -> ONGC | SL 247.8
+2026-02-10 | INFO | [SL] NO CHANGE -> NIFTYBEES | SL 276.9
+2026-02-10 | INFO | [SL] NO CHANGE -> YESBANK | SL 20.6
+2026-02-10 | INFO | [SL] NO CHANGE -> CUB | SL 271.6
+2026-02-10 | INFO | [SL] NO CHANGE -> GESHIP | SL 1181.9
+2026-02-10 | INFO | [SL] NO CHANGE -> TECHM | SL 1591.6
+2026-02-10 | INFO | [SL] NO CHANGE -> TMPV | SL 339.7
+2026-02-10 | INFO | [SL] NO CHANGE -> KARURVYSYA | SL 293.9
+2026-02-10 | INFO | [SL] NO CHANGE -> IOC | SL 158.5
+2026-02-10 | INFO | [SL] NO CHANGE -> TATACONSUM | SL 1068.7
+2026-02-10 | INFO | [SL] NO CHANGE -> BANKBEES | SL 590.7
+2026-02-10 | INFO | [SL] NO CHANGE -> ICICIBANK | SL 1315.5
+2026-02-10 | INFO | [SL] NO CHANGE -> DATAPATTNS | SL 2524.6
+2026-02-10 | INFO | [SL] NO CHANGE -> KTKBANK | SL 186.2
+2026-02-10 | INFO | [SL] NO CHANGE -> RAINBOW | SL 1079.1
+2026-02-10 | INFO | [SL] NO CHANGE -> MRPL | SL 174.8
+2026-02-10 | INFO | [SL] NO CHANGE -> VIKASECO | SL 1.5
+2026-02-10 | INFO | [SL] NO CHANGE -> OLECTRA | SL 984.5
+2026-02-10 | INFO | [SL] NO CHANGE -> TORNTPOWER | SL 1286.1
+2026-02-10 | INFO | [SL] NO CHANGE -> M&M | SL 3250.0
+2026-02-10 | INFO | [SL] NO CHANGE -> POWERGRID | SL 263.5
+2026-02-10 | INFO | [SL] NO CHANGE -> UNIONBANK | SL 163.7
+2026-02-10 | INFO | [SL] NO CHANGE -> FEDERALBNK | SL 259.0
+2026-02-10 | INFO | [SL] NO CHANGE -> SBIN | SL 1031.4
+2026-02-10 | INFO | [SL] NO CHANGE -> ASHOKLEY | SL 185.2
+2026-02-10 | INFO | [SL] NO CHANGE -> DLF | SL 604.0
+2026-02-10 | INFO | [SL] NO CHANGE -> NTPC | SL 334.1
+2026-02-10 | INFO | [SL] NO CHANGE -> ACMESOLAR | SL 205.9
+2026-02-10 | INFO | [SL] NO CHANGE -> GAIL | SL 151.5
+2026-02-10 | INFO | [SL] NO CHANGE -> SYRMA | SL 784.9
+2026-02-10 | INFO | [SL] NO CHANGE -> OIL | SL 463.3
+2026-02-10 | INFO | [SL] NO CHANGE -> MID150BEES | SL 211.6
+2026-02-10 | INFO | [SL] NO CHANGE -> PETRONET | SL 273.3
+2026-02-10 | INFO | [SL] NO CHANGE -> AXISBANK | SL 1289.9
+2026-02-10 | INFO | [SL] NO CHANGE -> TVSMOTOR | SL 3461.0
+2026-02-10 | INFO | [SL] NO CHANGE -> BEL | SL 407.7
+2026-02-10 | INFO | [SL] NO CHANGE -> JKTYRE | SL 500.3
+2026-02-10 | INFO | [SL] NO CHANGE -> CCL | SL 918.8
+2026-02-10 | INFO | [SL] NO CHANGE -> ABB | SL 5234.4
+2026-02-10 | INFO | [SL] NO CHANGE -> NMDC | SL 77.6
+2026-02-10 | INFO | [SL] NO CHANGE -> BSOFT | SL 414.5
+2026-02-10 | INFO | [SL] NO CHANGE -> IDBI | SL 98.2
+2026-02-10 | INFO | [SL] NO CHANGE -> AARTIIND | SL 423.4
+2026-02-10 | INFO | [SL] SKIP -> TMCV | insufficient candles
+2026-02-10 | INFO | [SL] SKIP -> LENSKART | insufficient candles
+2026-02-10 | INFO | [SL] NO CHANGE -> HCLTECH | SL 1558.4
+2026-02-10 | INFO | [SL] NO CHANGE -> CHOLAFIN | SL 1593.2
+2026-02-10 | INFO | [SL] NO CHANGE -> NYKAA | SL 250.1
+2026-02-10 | INFO | [SL] NO CHANGE -> PFC | SL 377.3
+2026-02-10 | INFO | [SL] NO CHANGE -> ADANIPORTS | SL 1413.2
+2026-02-10 | INFO | [SL] NO CHANGE -> TITAN | SL 3832.0
+2026-02-10 | INFO | [SL] NO CHANGE -> CEATLTD | SL 3614.0
+2026-02-10 | INFO | [SL] NO CHANGE -> BSE | SL 2686.6
+2026-02-10 | INFO | [SL] NO CHANGE -> MFSL | SL 1577.9
+2026-02-10 | INFO | [SL] NO CHANGE -> CHENNPETRO | SL 829.4
+2026-02-10 | INFO | [SL] NO CHANGE -> BHARATFORG | SL 1431.9
+2026-02-10 | INFO | ========== SCRIPT END ==========
+2026-02-10 | INFO | ========== SCRIPT START ==========
+2026-02-10 | INFO | Initializing KiteConnect
+2026-02-10 | INFO | Login successful (cached token)
+2026-02-10 | INFO | Fetching all orders from Kite
+2026-02-10 | INFO | Total orders fetched: 8
+2026-02-10 | INFO | Today's COMPLETE orders count: 2
+2026-02-10 | INFO | ORDER -> symbol=LT | type=BUY | status=COMPLETE | price=4130.0
+2026-02-10 | INFO | ORDER -> symbol=M&MFIN | type=BUY | status=COMPLETE | price=393.2
+2026-02-10 | INFO | Fetching holdings from Kite
+2026-02-10 | INFO | HOLDING -> symbol=AARTIIND
+2026-02-10 | INFO | HOLDING -> symbol=ABB
+2026-02-10 | INFO | HOLDING -> symbol=ACMESOLAR
+2026-02-10 | INFO | HOLDING -> symbol=ADANIPORTS
+2026-02-10 | INFO | HOLDING -> symbol=APLAPOLLO
+2026-02-10 | INFO | HOLDING -> symbol=ASHOKLEY
+2026-02-10 | INFO | HOLDING -> symbol=AXISBANK
+2026-02-10 | INFO | HOLDING -> symbol=BANKBEES
+2026-02-10 | INFO | HOLDING -> symbol=BEL
+2026-02-10 | INFO | HOLDING -> symbol=BHARATFORG
+2026-02-10 | INFO | HOLDING -> symbol=BPCL
+2026-02-10 | INFO | HOLDING -> symbol=BSE
+2026-02-10 | INFO | HOLDING -> symbol=BSOFT
+2026-02-10 | INFO | HOLDING -> symbol=CCL
+2026-02-10 | INFO | HOLDING -> symbol=CEATLTD
+2026-02-10 | INFO | HOLDING -> symbol=CHENNPETRO
+2026-02-10 | INFO | HOLDING -> symbol=CHOLAFIN
+2026-02-10 | INFO | HOLDING -> symbol=COALINDIA
+2026-02-10 | INFO | HOLDING -> symbol=CUB
+2026-02-10 | INFO | HOLDING -> symbol=DATAPATTNS
+2026-02-10 | INFO | HOLDING -> symbol=DLF
+2026-02-10 | INFO | HOLDING -> symbol=FEDERALBNK
+2026-02-10 | INFO | HOLDING -> symbol=GAIL
+2026-02-10 | INFO | HOLDING -> symbol=GESHIP
+2026-02-10 | INFO | HOLDING -> symbol=GVT&D
+2026-02-10 | INFO | HOLDING -> symbol=HCLTECH
+2026-02-10 | INFO | HOLDING -> symbol=HINDCOPPER
+2026-02-10 | INFO | HOLDING -> symbol=ICICIBANK
+2026-02-10 | INFO | HOLDING -> symbol=IDBI
+2026-02-10 | INFO | HOLDING -> symbol=IOC
+2026-02-10 | INFO | HOLDING -> symbol=IREDA
+2026-02-10 | INFO | HOLDING -> symbol=JKTYRE
+2026-02-10 | INFO | HOLDING -> symbol=KARURVYSYA
+2026-02-10 | INFO | HOLDING -> symbol=KTKBANK
+2026-02-10 | INFO | HOLDING -> symbol=LENSKART
+2026-02-10 | INFO | HOLDING -> symbol=M&M
+2026-02-10 | INFO | HOLDING -> symbol=MAZDOCK
+2026-02-10 | INFO | HOLDING -> symbol=MFSL
+2026-02-10 | INFO | HOLDING -> symbol=MID150BEES
+2026-02-10 | INFO | HOLDING -> symbol=MRPL
+2026-02-10 | INFO | HOLDING -> symbol=NAVINFLUOR
+2026-02-10 | INFO | HOLDING -> symbol=NESTLEIND
+2026-02-10 | INFO | HOLDING -> symbol=NIFTYBEES
+2026-02-10 | INFO | HOLDING -> symbol=NMDC
+2026-02-10 | INFO | HOLDING -> symbol=NTPC
+2026-02-10 | INFO | HOLDING -> symbol=NYKAA
+2026-02-10 | INFO | HOLDING -> symbol=OIL
+2026-02-10 | INFO | HOLDING -> symbol=OLECTRA
+2026-02-10 | INFO | HOLDING -> symbol=ONGC
+2026-02-10 | INFO | HOLDING -> symbol=PETRONET
+2026-02-10 | INFO | HOLDING -> symbol=PFC
+2026-02-10 | INFO | HOLDING -> symbol=POWERGRID
+2026-02-10 | INFO | HOLDING -> symbol=RAINBOW
+2026-02-10 | INFO | HOLDING -> symbol=SBIN
+2026-02-10 | INFO | HOLDING -> symbol=SYRMA
+2026-02-10 | INFO | HOLDING -> symbol=TATACONSUM
+2026-02-10 | INFO | HOLDING -> symbol=TATASTEEL
+2026-02-10 | INFO | HOLDING -> symbol=TECHM
+2026-02-10 | INFO | HOLDING -> symbol=TITAN
+2026-02-10 | INFO | HOLDING -> symbol=TMCV
+2026-02-10 | INFO | HOLDING -> symbol=TMPV
+2026-02-10 | INFO | HOLDING -> symbol=TORNTPOWER
+2026-02-10 | INFO | HOLDING -> symbol=TVSMOTOR
+2026-02-10 | INFO | HOLDING -> symbol=UNIONBANK
+2026-02-10 | INFO | HOLDING -> symbol=VIKASECO
+2026-02-10 | INFO | HOLDING -> symbol=VIKASLIFE
+2026-02-10 | INFO | HOLDING -> symbol=YESBANK
+2026-02-10 | INFO | Syncing portfolio DB with orders and holdings
+2026-02-10 | INFO | DB ADD -> LT | entry_date=2026-02-10
+2026-02-10 | INFO | DB ADD -> M&MFIN | entry_date=2026-02-10
+2026-02-10 | INFO | DB DELETE -> BPCL
+2026-02-10 | INFO | DB DELETE -> HINDCOPPER
+2026-02-10 | INFO | DB DELETE -> GVT&D
+2026-02-10 | INFO | DB DELETE -> MAZDOCK
+2026-02-10 | INFO | DB DELETE -> APLAPOLLO
+2026-02-10 | INFO | DB DELETE -> TATASTEEL
+2026-02-10 | INFO | DB DELETE -> COALINDIA
+2026-02-10 | INFO | DB DELETE -> NESTLEIND
+2026-02-10 | INFO | DB DELETE -> VIKASLIFE
+2026-02-10 | INFO | DB DELETE -> NAVINFLUOR
+2026-02-10 | INFO | DB DELETE -> IREDA
+2026-02-10 | INFO | DB DELETE -> ONGC
+2026-02-10 | INFO | DB DELETE -> NIFTYBEES
+2026-02-10 | INFO | DB DELETE -> YESBANK
+2026-02-10 | INFO | DB DELETE -> CUB
+2026-02-10 | INFO | DB DELETE -> GESHIP
+2026-02-10 | INFO | DB DELETE -> TECHM
+2026-02-10 | INFO | DB DELETE -> TMPV
+2026-02-10 | INFO | DB DELETE -> KARURVYSYA
+2026-02-10 | INFO | DB DELETE -> IOC
+2026-02-10 | INFO | DB DELETE -> TATACONSUM
+2026-02-10 | INFO | DB DELETE -> BANKBEES
+2026-02-10 | INFO | DB DELETE -> ICICIBANK
+2026-02-10 | INFO | DB DELETE -> DATAPATTNS
+2026-02-10 | INFO | DB DELETE -> IRCTC
+2026-02-10 | INFO | DB DELETE -> KTKBANK
+2026-02-10 | INFO | DB DELETE -> RAINBOW
+2026-02-10 | INFO | DB DELETE -> MRPL
+2026-02-10 | INFO | DB DELETE -> VIKASECO
+2026-02-10 | INFO | DB DELETE -> OLECTRA
+2026-02-10 | INFO | DB DELETE -> TORNTPOWER
+2026-02-10 | INFO | DB DELETE -> M&M
+2026-02-10 | INFO | DB DELETE -> POWERGRID
+2026-02-10 | INFO | DB DELETE -> UNIONBANK
+2026-02-10 | INFO | DB DELETE -> FEDERALBNK
+2026-02-10 | INFO | DB DELETE -> SBIN
+2026-02-10 | INFO | DB DELETE -> ASHOKLEY
+2026-02-10 | INFO | DB DELETE -> DLF
+2026-02-10 | INFO | DB DELETE -> NTPC
+2026-02-10 | INFO | DB DELETE -> ACMESOLAR
+2026-02-10 | INFO | DB DELETE -> GAIL
+2026-02-10 | INFO | DB DELETE -> ITCHOTELS
+2026-02-10 | INFO | DB DELETE -> SYRMA
+2026-02-10 | INFO | DB DELETE -> OIL
+2026-02-10 | INFO | DB DELETE -> MID150BEES
+2026-02-10 | INFO | DB DELETE -> PETRONET
+2026-02-10 | INFO | DB DELETE -> AXISBANK
+2026-02-10 | INFO | DB DELETE -> TVSMOTOR
+2026-02-10 | INFO | DB DELETE -> BEL
+2026-02-10 | INFO | DB DELETE -> JKTYRE
+2026-02-10 | INFO | DB DELETE -> CCL
+2026-02-10 | INFO | DB DELETE -> ABB
+2026-02-10 | INFO | DB DELETE -> NMDC
+2026-02-10 | INFO | DB DELETE -> BSOFT
+2026-02-10 | INFO | DB DELETE -> IDBI
+2026-02-10 | INFO | DB DELETE -> AARTIIND
+2026-02-10 | INFO | DB DELETE -> TMCV
+2026-02-10 | INFO | DB DELETE -> LENSKART
+2026-02-10 | INFO | DB DELETE -> HCLTECH
+2026-02-10 | INFO | DB DELETE -> CHOLAFIN
+2026-02-10 | INFO | DB DELETE -> NYKAA
+2026-02-10 | INFO | DB DELETE -> PFC
+2026-02-10 | INFO | DB DELETE -> ADANIPORTS
+2026-02-10 | INFO | DB DELETE -> TITAN
+2026-02-10 | INFO | DB DELETE -> CEATLTD
+2026-02-10 | INFO | DB DELETE -> BSE
+2026-02-10 | INFO | DB DELETE -> MFSL
+2026-02-10 | INFO | DB DELETE -> CHENNPETRO
+2026-02-10 | INFO | DB DELETE -> BHARATFORG
+2026-02-10 | INFO | DB DELETE -> LT
+2026-02-10 | INFO | DB DELETE -> M&MFIN
+2026-02-10 | INFO | DB sync completed
+2026-02-10 | INFO | Starting SL calculation from DB symbols
+2026-02-10 | INFO | ========== SCRIPT END ==========

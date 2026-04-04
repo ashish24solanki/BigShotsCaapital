@@ -1,0 +1,465 @@
+[2026-02-02 22:45:18] ACMESOLAR | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:19] APLAPOLLO | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:19] ASHOKLEY | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:19] AXISBANK | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:19] BANKBEES | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:19] BEL | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:20] BEML | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:20] BPCL | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:20] COALINDIA | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:20] CUB | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:20] DATAPATTNS | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:20] DLF | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:21] FEDERALBNK | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:21] GAIL | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:21] GESHIP | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:21] GVT&D | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:21] HCLTECH | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:22] HINDCOPPER | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:22] ICICIBANK | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:22] IOC | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:23] IRCTC | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:23] IREDA | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:23] ITCHOTELS | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:23] KARURVYSYA | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:23] KTKBANK | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:24] LENSKART | FAIL | Insufficient candles (59)
+[2026-02-02 22:45:24] M&M | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:24] MAZDOCK | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:24] MID150BEES | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:24] MRPL | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:25] NAVINFLUOR | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:25] NESTLEIND | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:26] NIFTYBEES | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:26] NTPC | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:26] OIL | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:26] OLECTRA | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:26] ONGC | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:27] PETRONET | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:27] POWERGRID | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:28] RAINBOW | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:28] SBIN | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:28] SYRMA | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:28] TATACONSUM | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:28] TATASTEEL | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:29] TECHM | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:29] TMCV | FAIL | Insufficient candles (57)
+[2026-02-02 22:45:30] TMPV | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:30] TORNTPOWER | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:30] TVSMOTOR | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:30] UNIONBANK | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:31] VIKASECO | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:31] VIKASLIFE | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:45:31] YESBANK | FAIL | check_pyramiding_signal returned None
+[2026-02-02 22:56:48] ACMESOLAR | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:48] ACMESOLAR | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:48] ACMESOLAR | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:48] ACMESOLAR | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:48] APLAPOLLO | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:48] APLAPOLLO | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:48] APLAPOLLO | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:48] APLAPOLLO | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:48] ASHOKLEY | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:48] ASHOKLEY | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:48] ASHOKLEY | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:48] ASHOKLEY | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:48] AXISBANK | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:48] AXISBANK | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:48] AXISBANK | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:48] AXISBANK | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:49] BANKBEES | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:49] BANKBEES | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:49] BANKBEES | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:49] BANKBEES | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:49] BEL | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:49] BEL | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:49] BEL | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:49] BEL | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:49] BEML | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:49] BEML | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:49] BEML | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:49] BEML | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:49] BPCL | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:49] BPCL | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:49] BPCL | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:49] BPCL | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:49] COALINDIA | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:49] COALINDIA | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:49] COALINDIA | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:49] COALINDIA | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:50] CUB | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:50] CUB | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:50] CUB | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:50] CUB | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:50] DATAPATTNS | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:50] DATAPATTNS | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:50] DATAPATTNS | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:50] DATAPATTNS | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:50] DLF | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:50] DLF | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:50] DLF | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:50] DLF | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:50] FEDERALBNK | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:50] FEDERALBNK | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:50] FEDERALBNK | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:50] FEDERALBNK | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:51] GAIL | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:51] GAIL | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:51] GAIL | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:51] GAIL | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:51] GESHIP | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:51] GESHIP | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:51] GESHIP | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:51] GESHIP | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:51] GVT&D | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:51] GVT&D | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:51] GVT&D | CHECK | ema_distance_ok = False
+[2026-02-02 22:56:51] GVT&D | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:51] HCLTECH | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:51] HCLTECH | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:51] HCLTECH | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:51] HCLTECH | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:52] HINDCOPPER | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:52] HINDCOPPER | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:52] HINDCOPPER | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:52] HINDCOPPER | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:52] ICICIBANK | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:52] ICICIBANK | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:52] ICICIBANK | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:52] ICICIBANK | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:52] IOC | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:52] IOC | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:52] IOC | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:52] IOC | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:52] IRCTC | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:52] IRCTC | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:52] IRCTC | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:52] IRCTC | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:52] IREDA | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:52] IREDA | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:52] IREDA | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:52] IREDA | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:53] ITCHOTELS | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:53] ITCHOTELS | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:53] ITCHOTELS | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:53] ITCHOTELS | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:53] KARURVYSYA | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:53] KARURVYSYA | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:53] KARURVYSYA | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:53] KARURVYSYA | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:54] KTKBANK | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:54] KTKBANK | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:54] KTKBANK | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:54] KTKBANK | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:54] LENSKART | FAIL | insufficient candles (59)
+[2026-02-02 22:56:54] M&M | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:54] M&M | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:54] M&M | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:54] M&M | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:54] MAZDOCK | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:54] MAZDOCK | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:54] MAZDOCK | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:54] MAZDOCK | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:54] MID150BEES | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:54] MID150BEES | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:54] MID150BEES | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:54] MID150BEES | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:55] MRPL | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:55] MRPL | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:55] MRPL | CHECK | ema_distance_ok = False
+[2026-02-02 22:56:55] MRPL | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:55] NAVINFLUOR | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:55] NAVINFLUOR | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:55] NAVINFLUOR | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:55] NAVINFLUOR | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:55] NESTLEIND | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:55] NESTLEIND | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:55] NESTLEIND | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:55] NESTLEIND | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:55] NIFTYBEES | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:55] NIFTYBEES | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:55] NIFTYBEES | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:55] NIFTYBEES | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:56] NTPC | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:56] NTPC | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:56] NTPC | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:56] NTPC | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:56] OIL | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:56] OIL | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:56] OIL | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:56] OIL | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:56] OLECTRA | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:56] OLECTRA | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:56] OLECTRA | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:56] OLECTRA | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:56] ONGC | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:56] ONGC | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:56] ONGC | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:56] ONGC | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:57] PETRONET | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:57] PETRONET | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:57] PETRONET | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:57] PETRONET | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:57] POWERGRID | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:57] POWERGRID | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:57] POWERGRID | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:57] POWERGRID | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:57] RAINBOW | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:57] RAINBOW | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:57] RAINBOW | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:57] RAINBOW | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:57] SBIN | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:57] SBIN | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:57] SBIN | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:57] SBIN | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:58] SYRMA | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:58] SYRMA | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:58] SYRMA | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:58] SYRMA | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:58] TATACONSUM | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:58] TATACONSUM | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:58] TATACONSUM | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:58] TATACONSUM | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:58] TATASTEEL | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:58] TATASTEEL | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:58] TATASTEEL | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:58] TATASTEEL | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:58] TECHM | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:58] TECHM | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:58] TECHM | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:58] TECHM | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:58] TMCV | FAIL | insufficient candles (57)
+[2026-02-02 22:56:59] TMPV | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:59] TMPV | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:59] TMPV | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:59] TMPV | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:59] TORNTPOWER | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:59] TORNTPOWER | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:59] TORNTPOWER | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:59] TORNTPOWER | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:59] TVSMOTOR | CHECK | rsi_strengthening = True
+[2026-02-02 22:56:59] TVSMOTOR | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:56:59] TVSMOTOR | CHECK | ema_distance_ok = True
+[2026-02-02 22:56:59] TVSMOTOR | FAIL | pyramiding conditions not met
+[2026-02-02 22:56:59] UNIONBANK | CHECK | rsi_strengthening = False
+[2026-02-02 22:56:59] UNIONBANK | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:57:00] UNIONBANK | CHECK | ema_distance_ok = True
+[2026-02-02 22:57:00] UNIONBANK | FAIL | pyramiding conditions not met
+[2026-02-02 22:57:00] VIKASECO | CHECK | rsi_strengthening = False
+[2026-02-02 22:57:00] VIKASECO | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:57:00] VIKASECO | CHECK | ema_distance_ok = True
+[2026-02-02 22:57:00] VIKASECO | FAIL | pyramiding conditions not met
+[2026-02-02 22:57:00] VIKASLIFE | CHECK | rsi_strengthening = False
+[2026-02-02 22:57:00] VIKASLIFE | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:57:00] VIKASLIFE | CHECK | ema_distance_ok = True
+[2026-02-02 22:57:00] VIKASLIFE | FAIL | pyramiding conditions not met
+[2026-02-02 22:57:00] YESBANK | CHECK | rsi_strengthening = True
+[2026-02-02 22:57:00] YESBANK | CHECK | close_breaks_recent_high = False
+[2026-02-02 22:57:00] YESBANK | CHECK | ema_distance_ok = True
+[2026-02-02 22:57:00] YESBANK | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:45] ACMESOLAR | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:45] ACMESOLAR | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:45] ACMESOLAR | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:45] ACMESOLAR | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:46] APLAPOLLO | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:46] APLAPOLLO | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:46] APLAPOLLO | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:46] APLAPOLLO | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:46] ASHOKLEY | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:46] ASHOKLEY | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:46] ASHOKLEY | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:46] ASHOKLEY | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:46] AXISBANK | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:46] AXISBANK | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:46] AXISBANK | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:46] AXISBANK | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:46] BANKBEES | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:46] BANKBEES | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:46] BANKBEES | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:46] BANKBEES | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:46] BEL | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:46] BEL | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:46] BEL | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:46] BEL | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:46] BEML | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:46] BEML | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:46] BEML | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:46] BEML | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:47] BPCL | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:47] BPCL | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:47] BPCL | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:47] BPCL | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:47] COALINDIA | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:47] COALINDIA | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:47] COALINDIA | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:47] COALINDIA | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:47] CUB | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:47] CUB | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:47] CUB | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:47] CUB | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:47] DATAPATTNS | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:47] DATAPATTNS | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:47] DATAPATTNS | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:47] DATAPATTNS | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:47] DLF | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:47] DLF | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:47] DLF | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:47] DLF | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:48] FEDERALBNK | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:48] FEDERALBNK | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:48] FEDERALBNK | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:48] FEDERALBNK | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:48] GAIL | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:48] GAIL | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:48] GAIL | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:48] GAIL | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:48] GESHIP | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:48] GESHIP | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:48] GESHIP | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:48] GESHIP | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:48] GVT&D | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:48] GVT&D | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:48] GVT&D | CHECK | ema_distance_ok = False
+[2026-02-03 08:50:48] GVT&D | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:49] HCLTECH | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:49] HCLTECH | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:49] HCLTECH | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:49] HCLTECH | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:49] HINDCOPPER | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:49] HINDCOPPER | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:49] HINDCOPPER | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:49] HINDCOPPER | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:49] ICICIBANK | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:49] ICICIBANK | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:49] ICICIBANK | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:49] ICICIBANK | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:49] IOC | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:49] IOC | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:49] IOC | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:49] IOC | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:50] IRCTC | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:50] IRCTC | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:50] IRCTC | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:50] IRCTC | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:50] IREDA | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:50] IREDA | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:50] IREDA | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:50] IREDA | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:50] ITCHOTELS | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:50] ITCHOTELS | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:50] ITCHOTELS | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:50] ITCHOTELS | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:50] KARURVYSYA | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:50] KARURVYSYA | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:50] KARURVYSYA | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:50] KARURVYSYA | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:50] KTKBANK | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:50] KTKBANK | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:50] KTKBANK | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:50] KTKBANK | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:51] LENSKART | FAIL | insufficient candles
+[2026-02-03 08:50:51] M&M | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:51] M&M | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:51] M&M | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:51] M&M | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:51] MAZDOCK | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:51] MAZDOCK | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:51] MAZDOCK | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:51] MAZDOCK | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:52] MID150BEES | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:52] MID150BEES | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:52] MID150BEES | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:52] MID150BEES | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:52] MRPL | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:52] MRPL | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:52] MRPL | CHECK | ema_distance_ok = False
+[2026-02-03 08:50:52] MRPL | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:52] NAVINFLUOR | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:52] NAVINFLUOR | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:52] NAVINFLUOR | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:52] NAVINFLUOR | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:52] NESTLEIND | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:52] NESTLEIND | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:52] NESTLEIND | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:52] NESTLEIND | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:52] NIFTYBEES | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:52] NIFTYBEES | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:52] NIFTYBEES | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:52] NIFTYBEES | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:52] NTPC | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:52] NTPC | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:52] NTPC | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:52] NTPC | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:53] OIL | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:53] OIL | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:53] OIL | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:53] OIL | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:53] OLECTRA | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:53] OLECTRA | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:53] OLECTRA | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:53] OLECTRA | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:53] ONGC | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:53] ONGC | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:53] ONGC | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:53] ONGC | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:54] PETRONET | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:54] PETRONET | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:54] PETRONET | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:54] PETRONET | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:54] POWERGRID | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:54] POWERGRID | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:54] POWERGRID | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:54] POWERGRID | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:54] RAINBOW | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:54] RAINBOW | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:54] RAINBOW | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:54] RAINBOW | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:54] SBIN | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:54] SBIN | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:54] SBIN | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:54] SBIN | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:54] SYRMA | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:54] SYRMA | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:54] SYRMA | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:54] SYRMA | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:55] TATACONSUM | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:55] TATACONSUM | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:55] TATACONSUM | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:55] TATACONSUM | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:55] TATASTEEL | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:55] TATASTEEL | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:55] TATASTEEL | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:55] TATASTEEL | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:56] TECHM | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:56] TECHM | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:56] TECHM | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:56] TECHM | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:56] TMCV | FAIL | insufficient candles
+[2026-02-03 08:50:56] TMPV | CHECK | rsi_strengthening = True
+[2026-02-03 08:50:56] TMPV | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:56] TMPV | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:56] TMPV | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:56] TORNTPOWER | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:56] TORNTPOWER | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:56] TORNTPOWER | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:56] TORNTPOWER | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:56] TVSMOTOR | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:56] TVSMOTOR | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:56] TVSMOTOR | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:56] TVSMOTOR | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:56] UNIONBANK | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:56] UNIONBANK | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:56] UNIONBANK | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:56] UNIONBANK | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:57] VIKASECO | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:57] VIKASECO | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:57] VIKASECO | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:57] VIKASECO | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:57] VIKASLIFE | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:57] VIKASLIFE | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:57] VIKASLIFE | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:57] VIKASLIFE | FAIL | pyramiding conditions not met
+[2026-02-03 08:50:57] YESBANK | CHECK | rsi_strengthening = False
+[2026-02-03 08:50:57] YESBANK | CHECK | close_breaks_recent_high = False
+[2026-02-03 08:50:57] YESBANK | CHECK | ema_distance_ok = True
+[2026-02-03 08:50:57] YESBANK | FAIL | pyramiding conditions not met
