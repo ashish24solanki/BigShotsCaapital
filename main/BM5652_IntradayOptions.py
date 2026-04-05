@@ -81,9 +81,11 @@ SYMBOLS = ["RELIANCE", "HDFCBANK", "AXISBANK", "SBIN", "NIFTY", "BANKNIFTY"]
 DEMO_MODE = True
 
 import requests
+from config.bot_config import DEMO_BOT_CHAT_ID, DEMO_BOT_TOKEN
 
-BOT_TOKEN = "8774306075:AAEhPX4wKO9pC6mo0wzXiVlDcGnrFUiRMrk"
-CHAT_ID = "-1003819611851"
+
+BOT_TOKEN = DEMO_BOT_TOKEN
+CHAT_ID = DEMO_BOT_CHAT_ID
 
 def send_telegram(msg):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
