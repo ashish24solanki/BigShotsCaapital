@@ -44,6 +44,108 @@ MAIN_LOG = os.path.join(LOG_DIR, "mainengine_g.log")
 TODAY = date.today().isoformat()
 
 # =====================================================
+# MTF CONFIG
+# =====================================================
+MTF_FILE = os.path.join(BASE_DIR, "database", "Zerodha_MTF.csv")
+
+
+def load_mtf_data():
+    try:
+        df = pd.read_csv(MTF_FILE)
+
+        # normalize
+        df.columns = [c.strip().lower() for c in df.columns]
+
+        main_log(f"[MTF DEBUG] Columns: {df.columns.tolist()}")
+
+        mtf_map = {}
+
+        for _, row in df.iterrows():
+            sym = str(row["tradingsymbol"]).strip().upper()
+            margin = float(row["margin"])
+
+            if sym and margin > 0:
+                mtf_map[sym] = margin
+
+        main_log(f"[MTF] Loaded {len(mtf_map)} symbols")
+        return mtf_map
+
+    except Exception as e:
+        main_log(f"[MTF ERROR] {e}")
+        return {}
+
+# =====================================================
+# MTF QTY CALCULATION (₹10k–₹10.5k, multiple of 5)
+# =====================================================
+def calculate_mtf_qty(buy_price, margin, target_cap=10000, max_cap=10500):
+    try:
+        if margin <= 0 or buy_price <= 0:
+            return 0
+
+        best_qty = 0
+        best_diff = float("inf")
+
+        # Step 1: find best qty (multiple of 5)
+        max_qty = int((target_cap / (margin / 100)) / buy_price) * 2
+        max_qty = max(5, (max_qty // 5) * 5)
+
+        for qty in range(5, max_qty + 1, 5):
+            exposure = qty * buy_price
+            used_cap = exposure * (margin / 100)
+
+            diff = abs(used_cap - target_cap)
+
+            if diff < best_diff:
+                best_diff = diff
+                best_qty = qty
+
+        # Step 2: adjust if exceeding max_cap
+        exposure = best_qty * buy_price
+        used_cap = exposure * (margin / 100)
+
+        if used_cap > max_cap:
+            for reduce in [1, 2, 3, 4]:
+                new_qty = best_qty - reduce
+                if new_qty <= 0:
+                    break
+
+                exposure = new_qty * buy_price
+                used_cap = exposure * (margin / 100)
+
+                if used_cap <= max_cap:
+                    return new_qty
+
+        return best_qty
+
+    except Exception as e:
+        main_log(f"[MTF QTY ERROR] {e}")
+        return 0
+
+
+# =====================================================
+# PORTFOLIO TELEGRAM (MTF SIGNALS)
+# =====================================================
+import requests
+from config.bot_config import PORT_BOT_TOKEN, PORT_BOT_CHAT_ID
+
+
+def send_portfolio_message(msg: str):
+    try:
+        requests.post(
+            f"https://api.telegram.org/bot{PORT_BOT_TOKEN}/sendMessage",
+            data={
+                "chat_id": PORT_BOT_CHAT_ID,
+                "text": msg,
+                "parse_mode": "HTML"
+            },
+            timeout=10,
+        )
+        main_log("📨 Sent to PORTFOLIO BOT")
+
+    except Exception as e:
+        main_log(f"[PORT TELEGRAM ERROR] {e}")
+
+# =====================================================
 # LOGGER
 # =====================================================
 def main_log(msg: str):
@@ -364,7 +466,7 @@ def main():
         main_log(f"ETF Engine failed: {e}")
 
     momo = load_momentum()
-
+    mtf_lines = []
     messages = []
     header = f"📅 {TODAY} — Strategy Summary\n"
 
@@ -378,14 +480,50 @@ def main():
         if not recent_momo.empty:
             count = len(recent_momo)
             main_log(f"Found {count} new momentum setups from the last 2 days")
-            lines = [f"{r.symbol} | Buy Above {r.buy_above} | SL {r.sl}" for _, r in recent_momo.iterrows()]
+            ##########################################################################
+            #lines = [f"{r.symbol} | Buy Above {r.buy_above} | SL {r.sl}" for _, r in recent_momo.iterrows()]
+
+            mtf_map = load_mtf_data()
+
+            pro_lines = []       # for PRO channel (NO qty)
+            mtf_lines = []       # for PORTFOLIO bot (WITH qty)
+
+            for _, r in recent_momo.iterrows():
+                sym = str(r.symbol).upper()
+                sym = sym.replace("-EQ", "").replace(".NS", "").strip()
+                buy_above = float(r.buy_above)
+                sl = r.sl
+
+                # =========================
+                # PRO MESSAGE (NO QTY)
+                # =========================
+                pro_lines.append(f"{sym} | Buy {buy_above} | SL {sl}")
+
+                # =========================
+                # MTF MESSAGE (WITH QTY)
+                # =========================
+                margin = mtf_map.get(sym)
+
+                if not margin:
+                    main_log(f"[MTF SKIP] {sym} not in MTF list")
+                    continue
+
+                qty = calculate_mtf_qty(buy_above, margin)
+
+                if qty == 0:
+                    main_log(f"[MTF SKIP] {sym} no valid qty in 10k range")
+                    continue
+
+                mtf_lines.append(f"{sym} | Buy {buy_above} | Qty {qty} | SL {sl}")
+
+            #########################################################################
             if show_terminal:
                 print("\n" + "="*70)
                 print(f"🟢 MOMENTUM — RECENT SETUPS TODAY ({count})")
                 print("="*70)
-                for line in lines:
+                for line in pro_lines:
                     print(line)
-            messages.append(header + f"🟢 RECENT MOMENTUM SETUPS ({count})\n" + "\n".join(lines))
+            messages.append(header + f"🟢 RECENT MOMENTUM SETUPS ({count})\n" + "\n".join(pro_lines))
         else:
             main_log("No recent momentum setups found")
 
@@ -396,6 +534,16 @@ def main():
             main_log("Telegram summary sent")
         except Exception as e:
             main_log(f"Telegram failed: {e}")
+    
+    # =====================================================
+    # SEND MTF SIGNALS TO PORTFOLIO BOT
+    # =====================================================
+    if send_telegram and mtf_lines:
+        try:
+            port_msg = f"<b>📊 MTF SETUPS ({TODAY})</b>\n\n" + "\n".join(mtf_lines)
+            send_portfolio_message(port_msg)
+        except Exception as e:
+            main_log(f"Portfolio Telegram failed: {e}")
 
     main_log("=== MAIN ENGINE G COMPLETED ===")
 
