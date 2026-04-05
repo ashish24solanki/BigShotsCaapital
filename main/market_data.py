@@ -84,7 +84,7 @@ def update_market_ohlc(kite):
     failed = 0
 
     print("\n📊 MARKET DATA UPDATE STARTED")
-    print(f"📊 NIFTY 500 universe size: {total}\n")
+    print(f"📊 NIFTY 200 universe size: {total}\n")
 
     for idx, (symbol, token) in enumerate(token_map.items(), start=1):
 

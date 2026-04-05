@@ -369,9 +369,11 @@ def main():
     header = f"📅 {TODAY} — Strategy Summary\n"
 
     if not momo.empty:
+        from engines.momentum_engine import get_last_trading_date
+        last_trading_date = get_last_trading_date()
         recent_momo = momo[
             (momo.status == "WAITING") &
-            (momo.signal_date >= (date.today() - pd.Timedelta(days=2)).isoformat())
+            (momo.signal_date == momo.signal_date.max())
         ]
         if not recent_momo.empty:
             count = len(recent_momo)

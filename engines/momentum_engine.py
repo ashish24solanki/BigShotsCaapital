@@ -136,6 +136,8 @@ def run_momentum_engine():
     c = con.cursor()
 
     new_setups_count = 0
+    passed_symbols = []
+    passed_logs = []
 
     for symbol in symbols:
         momo_log(symbol, "Checking symbol")
@@ -375,7 +377,13 @@ def run_momentum_engine():
         )
         ##################################################
         momo_log(symbol, f"cond1={cond1}, cond2={cond2}, cond3={cond3}")
+        if cond1 or cond2 or cond3:
+            momo_log(symbol, "✅ PASSED STRATEGY")
         ##################################################
+        
+        if cond3 and not final_condition:
+            momo_log(symbol, f"FILTER FAIL → price={cond_price_cap}, volume={cond_volume}, green={cond_green}")
+
         if not final_condition:
             momo_log(symbol, "Skipped: final condition not met")
             if cond3:
@@ -404,10 +412,15 @@ def run_momentum_engine():
         )
 
         con.commit()
+        passed_symbols.append(symbol)
+        log_msg= f"[(symbol] NEW SETUP - WAITING | Buy above {buy_above} | SL {sl}"
+        passed_logs.append(log_msg)
         momo_log(symbol, f"NEW SETUP - WAITING | Buy above {buy_above} | SL {sl}")
         new_setups_count += 1
 
     con.close()
+    for line in passed_logs:
+        print(line)
     momo_log("SYSTEM", f"Momentum engine completed | New setups found: {new_setups_count}")
     print(">>> Momentum engine completed")
 
