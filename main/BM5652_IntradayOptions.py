@@ -19,7 +19,7 @@ if BASE_DIR not in sys.path:
 
 # ================= CONFIG =================
 from config.kite_config import API_KEY, API_SECRET
-ACCESS_TOKEN_FILE = os.path.join(BASE_DIR, "config", "access_token.txt")
+ACCESS_TOKEN_FILE = "/root/access_token.txt"
 
 
 LOG_DIR = os.path.join(BASE_DIR, "logs")
@@ -98,7 +98,14 @@ def send_telegram(msg):
 last_trade_time = {}
 # ==========================================
 
-kite = get_kite()
+kite = KiteConnect(api_key=API_KEY)
+
+with open("/root/access_token.txt") as f:
+    access_token = f.read().strip()
+
+kite.set_access_token(access_token)
+
+main_log("Zerodha connected (shared VM token)")
 live_prices = {}
 token_map = {}
 
@@ -495,25 +502,65 @@ def wait_for_next_candle():
 
 # ================= RUN =================
 
+
+def ensure_session():
+    global kite
+    try:
+        kite.profile()
+    except:
+        main_log("Session expired → refreshing token")
+
+        import subprocess
+        subprocess.run([
+            "/root/tradingenv/bin/python",
+            "/root/auto_login.py"
+        ])
+
+        time.sleep(3)
+
+        with open("/root/access_token.txt") as f:
+            access_token = f.read().strip()
+
+        kite.set_access_token(access_token)
+        main_log("Session refreshed")
+
+
+def wait_for_start():
+    while True:
+        now = datetime.now()
+        if now.hour >= 11:
+            print("Starting intraday bot...")
+            break
+        print(f"Waiting for 11 AM... Current: {now}", end="\r")
+        time.sleep(30)
+
+
 if __name__ == "__main__":
-    send_telegram("✅ Telegram Test: Bot is working!")
-    import time
-    #==============LOAD TOKEN===================
+    send_telegram("✅ Intraday Bot Ready")
+
+    # WAIT UNTIL 11 AM
+    wait_for_start()
+
+    # Load tokens
     spot_instruments = kite.instruments("NSE")
     for ins in spot_instruments:
         if ins["tradingsymbol"] in SYMBOLS:
-            token_map[ins["instrument_token"]] = ins["tradingsymbol"] 
+            token_map[ins["instrument_token"]] = ins["tradingsymbol"]
 
+    # Start websocket
     kws = KiteTicker(API_KEY, kite.access_token)
     kws.on_ticks = on_ticks
     kws.on_connect = on_connect
     kws.connect(threaded=True)
-    time.sleep(5)       
+
+    time.sleep(5)
+
+    send_telegram("🚀 Intraday Bot Started")
 
     while True:
+        ensure_session()
         wait_for_next_candle()
         run_strategy()
-
 
 
 

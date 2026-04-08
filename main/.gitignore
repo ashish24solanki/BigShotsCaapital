@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+support/debug_swing.py
+database/
+logs/
+config/bot_config.py
+config/kite_config.py
+config/access_token.py
+config/generate_token.py
+cloud/bot_config.pyaccess_token.txt
+*.log
+.env

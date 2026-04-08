@@ -32,7 +32,6 @@ from support.utils import (
 # CONFIG
 # =====================================================
 PORTFOLIO_DB = r"C:\Users\ask4b\OneDrive\Documents\BigShotsCapital\database\port_G.db"
-ACCESS_TOKEN_FILE = os.path.join(BASE_DIR, "config", "access_token.txt")
 
 LOOKBACK_DAYS = 600
 MIN_CANDLES = 200
@@ -104,32 +103,23 @@ def send_telegram(msg: str):
 # ZERODHA LOGIN
 # =====================================================
 def get_kite():
+    import requests
+
     kite = KiteConnect(api_key=API_KEY)
 
-    if os.path.exists(ACCESS_TOKEN_FILE):
-        try:
-            with open(ACCESS_TOKEN_FILE, "r") as f:
-                token = f.read().strip()
-            kite.set_access_token(token)
-            kite.profile()
-            log.info("Zerodha logged in (cached token)")
-            return kite
-        except (TokenException, Exception) as e:
-            log.warning(f"Cached token invalid/expired: {e}")
+    try:
+        url = "http://143.110.181.111:5000/token?key=BigShotsCapital_06"
+        access_token = requests.get(url, timeout=3).text.strip()
 
-    log.info("Zerodha login required")
-    webbrowser.open(kite.login_url())
-    raw = input("Paste request_token or full URL: ").strip()
-    request_token = raw.split("request_token=")[1].split("&")[0] if "request_token=" in raw else raw
+        kite.set_access_token(access_token)
+        kite.profile()
 
-    data = kite.generate_session(request_token, api_secret=API_SECRET)
-    access_token = data["access_token"]
-    with open(ACCESS_TOKEN_FILE, "w") as f:
-        f.write(access_token)
+        log.info("Zerodha connected (VM token)")
+        return kite
 
-    kite.set_access_token(access_token)
-    log.info("Zerodha login successful (new token)")
-    return kite
+    except Exception as e:
+        log.error(f"VM token fetch failed: {e}")
+        raise Exception("❌ Cannot get access token from VM")
 
 # =====================================================
 # DB HELPERS

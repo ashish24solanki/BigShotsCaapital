@@ -35,7 +35,6 @@ from support.utils import calculate_sl_t10_ema20, check_pyramiding_signal
 DB_MOMENTUM    = os.path.join(BASE_DIR, "database", "momentum.db")
 DB_OHLC        = os.path.join(BASE_DIR, "database", "market_ohlc.db")
 
-ACCESS_TOKEN_FILE = os.path.join(BASE_DIR, "config", "access_token.txt")
 
 LOG_DIR = os.path.join(BASE_DIR, "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
@@ -167,39 +166,27 @@ def ask_yes_no(q: str, default="y") -> bool:
 # =====================================================
 # ZERODHA LOGIN
 # =====================================================
+
 def get_kite():
+    import requests
+
     kite = KiteConnect(api_key=API_KEY)
 
-    if os.path.exists(ACCESS_TOKEN_FILE):
-        token = open(ACCESS_TOKEN_FILE).read().strip()
-        if token:
-            kite.set_access_token(token)
-            try:
-                kite.profile()
-                main_log("Zerodha logged in (cached token)")
-                return kite
-            except TokenException:
-                main_log("Zerodha token expired")
+    try:
+        url = "http://143.110.181.111:5000/token?key=BigShotsCapital_06"
+        access_token = requests.get(url, timeout=3).text.strip()
 
-    main_log("Zerodha login required")
-    webbrowser.open(kite.login_url())
+        kite.set_access_token(access_token)
+        kite.profile()
 
-    raw = input("Paste request_token or full URL: ").strip()
-    request_token = (
-        raw.split("request_token=")[1].split("&")[0]
-        if "request_token=" in raw else raw
-    )
+        main_log("Zerodha connected (VM token)")
+        return kite
 
-    session = kite.generate_session(request_token, api_secret=API_SECRET)
-    access_token = session["access_token"]
+    except Exception as e:
+        main_log(f"VM token fetch failed: {e}")
+        raise Exception("❌ Cannot get access token from VM")
 
-    with open(ACCESS_TOKEN_FILE, "w") as f:
-        f.write(access_token)
-
-    kite.set_access_token(access_token)
-    main_log("Zerodha login successful (new token)")
-    return kite
-
+   
 # =====================================================
 # DB LOADERS
 # =====================================================
@@ -228,7 +215,7 @@ def get_symbol_ohlc_from_db(symbol):
         return None
 
     # Force date to date object
-    df['date'] = pd.to_datetime(df['date'], errors='coerce')
+    df['date'] = pd.to_datetime(df['date'], errors='coerce').dt.date
     df = df.dropna(subset=['date'])
     df = df.sort_values("date")
     return df
@@ -314,17 +301,14 @@ def check_activate_and_update_active(send_telegram):
                 sl_data = calculate_sl_t10_ema20(
                     df_hist,
                     TODAY,
-                    previous_e_sl= current_sl,
+                    previous_e_sl= 0,
                     previous_low= previous_low,
                     previous_sl=current_sl
                 )
+                               
                 
-                
-
-                if sl_data is None:
-                    # Fallback for safety
-                    new_sl = round(latest_close * 0.90,1)  # 10% below close
-                    main_log(f"[SL FALLBACK] {sym} using 10% SL: {new_sl}")
+                if not sl_data or "final_sl" not in sl_data:
+                    new_sl = round(latest_close * 0.90,1)
                     e_sl_calculated = 0
                     with sqlite3.connect(DB_MOMENTUM) as con:
                         con.execute(
@@ -333,39 +317,13 @@ def check_activate_and_update_active(send_telegram):
                         )
                         con.commit()
                     continue
-                else:
-                    if not sl_data or "final_sl" not in sl_data:
-                        new_sl = round(latest_close * 0.90,1)  # 10% below close
-                        e_sl_calculated = 0
-                        with sqlite3.connect(DB_MOMENTUM) as con:
-                            con.execute(
-                                "UPDATE momentum_trades SET sl = ? WHERE symbol = ?",
-                                (new_sl, sym)
-                            )
-                            con.commit()
-                        continue
-                    else:
-                        calculated_sl = sl_data.get("final_sl", current_sl)
-                        e_sl_calculated = sl_data.get("e_sl", 0)
-                        new_sl = max(calculated_sl, current_sl)
-                
-                displayed_sl = current_sl
-                if new_sl > latest_close and e_sl_calculated > 0:
-                    displayed_sl = max(e_sl_calculated, 0)
-                else:
-                    displayed_sl = new_sl               
 
-                
-
+                calculated_sl = sl_data["final_sl"]
+                e_sl_calculated = sl_data.get("e_sl", 0)
+                new_sl = max(calculated_sl, current_sl)
                 if new_sl > current_sl:
-                    with sqlite3.connect(DB_MOMENTUM) as con:
-                        con.execute(
-                            "UPDATE momentum_trades SET sl = ? WHERE symbol = ?",
-                            (new_sl, sym)
-                        )
-                        con.commit()
-                    sl_updated_today.append(f"{sym} → SL {displayed_sl}")
-                    main_log(f"[SL UPDATE] ACTIVE {sym}: {current_sl} → {displayed_sl} (E-SL: {e_sl_calculated > 0})")
+                    sl_updated_today.append(f"{sym} → SL {new_sl}")
+
 
             # =====================================================
             # PYRAMIDING CHECK
@@ -378,7 +336,7 @@ def check_activate_and_update_active(send_telegram):
 
                     pyramid = check_pyramiding_signal(df_hist_reset)
 
-                    if pyramid.get("passed"):
+                    if pyramid.get("passed") and sym not in pyramid_triggered:
                         buy_trigger = pyramid.get("buy_trigger")
                         pyramid_triggered.add(sym)
 
