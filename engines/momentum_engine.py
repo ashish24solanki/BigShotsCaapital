@@ -390,7 +390,7 @@ def run_momentum_engine():
                 momo_log(symbol, "⚠️ COND3 TRUE BUT FILTER FAILED")
             continue
 
-        sl_data = calculate_sl_t10_ema20(df.reset_index(), LAST_TRADING_DATE)
+        sl_data = calculate_sl_t10_ema20(df.copy(), LAST_TRADING_DATE)
         if not sl_data or sl_data.get("final_sl") is None:
             momo_log(symbol, "Skipped: SL calc failed")
             continue
@@ -413,7 +413,7 @@ def run_momentum_engine():
 
         con.commit()
         passed_symbols.append(symbol)
-        log_msg= f"[(symbol] NEW SETUP - WAITING | Buy above {buy_above} | SL {sl}"
+        log_msg= f"[{symbol}] NEW SETUP - WAITING | Buy above {buy_above} | SL {sl}"
         passed_logs.append(log_msg)
         momo_log(symbol, f"NEW SETUP - WAITING | Buy above {buy_above} | SL {sl}")
         new_setups_count += 1

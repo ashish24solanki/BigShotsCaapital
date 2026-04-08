@@ -51,9 +51,12 @@ def resample_ohlc(df: pd.DataFrame, timeframe: str):
 
     df = df.copy()
 
-    if "date" in df.columns:
-        df["date"] = pd.to_datetime(df["date"])
-        df = df.set_index("date")
+    if "date" not in df.columns:
+        log.error("[SL CALC] 'date' column missing")
+        return None
+
+    df["date"] = pd.to_datetime(df["date"], errors='coerce')
+    df = df.set_index("date")
     df = df.sort_index()
     
     ohlc_dict = {
@@ -276,62 +279,122 @@ def calculate_sl_t10_ema20(
     previous_e_sl: float = 0,
     previous_low: float = None,
     previous_sl: float = None,
+    today_close=None
 ):
+
+    # ===============================
+    # BASIC VALIDATION
+    # ===============================
     if df is None or df.empty:
-        log.info("[SL CALC] Input df is empty or None")
+        log.error("[SL] Empty dataframe")
         return None
 
     df = df.copy()
 
-    # --- FIXED DATE HANDLING ---
-    # Convert 'date' column to Python date objects for reliable comparison
-    if "date" in df.columns:
-        df["date"] = pd.to_datetime(df["date"], errors='coerce').dt.date
-    
-    # Convert as_of_date to Python date object safely
+    if "date" not in df.columns:
+        log.error("[SL] 'date' column missing")
+        return None
+
+    df["date"] = pd.to_datetime(df["date"], errors="coerce").dt.date
+
     try:
         as_of = pd.to_datetime(as_of_date).date()
-    except Exception:
-        log.error(f"[SL CALC] Invalid as_of_date: {as_of_date}")
+    except:
+        log.error(f"[SL] Invalid as_of_date: {as_of_date}")
         return None
-    # ---------------------------
 
-    # Debug: before any filtering
-    log.info(f"[SL CALC DEBUG] {df.shape[0]} raw candles | latest date: {df['date'].max() if 'date' in df.columns else 'N/A'} | as_of: {as_of}")
+    # Remove today candle
+    df = df[df["date"] < as_of]
 
-    # Filter only past dates (exclude today or future)
-    if "date" in df.columns:
-        df = df[df["date"] < as_of]
-        df = df.sort_values("date")
+    if df.empty:
+        log.error("[SL] No data after removing today")
+        return None
 
-    log.info(f"[SL CALC DEBUG] {df.shape[0]} candles after date filter (< {as_of}) | latest remaining: {df['date'].max() if not df.empty and 'date' in df.columns else 'None'}")
+    df = df.sort_values("date")
 
     if len(df) < min_candles:
-        log.info(f"[SL CALC] Insufficient candles after filter: {len(df)} < {min_candles}")
+        log.error(f"[SL] Not enough candles: {len(df)}")
         return None
 
+    # ===============================
+    # EMA CALC
+    # ===============================
     if "ema20" not in df.columns:
         df["ema20"] = calculate_ema(df["close"], 20)
 
+    df = df.dropna(subset=["ema20"])
+
+    if df.empty:
+        log.error("[SL] EMA removed all rows")
+        return None
+
+    # ===============================
+    # T10 (YESTERDAY -10 candles)
+    # ===============================
     t10 = df.tail(lookback)
 
-    highest_close = float(t10["close"].max())
-    sl1 = highest_close * (1 - capital_sl_pct)
+    if len(t10) < lookback:
+        log.error("[SL] Not enough T10 candles")
+        return None
 
-    below_ema = t10[t10["low"] < t10["ema20"]]
-
-    sl2 = None
-    if not below_ema.empty:
-        if previous_low is not None:
-            structure_low = max(previous_low,float(below_ema["low"].min())) 
+    # ===============================
+    # CURRENT PRICE
+    # ===============================
+    try:
+        if today_close is not None and pd.notna(today_close):
+            last_close = float(today_close)
         else:
-            structure_low = float(below_ema["low"].min())
-        sl2 = structure_low * (1 - structure_sl_pct)
+            last_close = float(df.iloc[-1]["close"])
+    except:
+        log.error("[SL] Invalid price")
+        return None
 
-    calculated_sl = max(sl1, sl2) if sl2 is not None else sl1
+    last_ema20 = float(df.iloc[-1]["ema20"])
 
-    # SL NEVER MOVES DOWN
-    if previous_sl is not None and previous_sl > 0:
+    # ===============================
+    # BREAKDOWN LOGIC (YOUR NEW RULE)
+    # ===============================
+    condition_breakdown = (
+        last_close < last_ema20 and
+        last_close < float(t10["close"].min())
+    )
+
+    if condition_breakdown:
+
+        log.info("[SL MODE] Breakdown SL")
+
+        lowest_low = float(t10["low"].min())
+        prev_close = float(df.iloc[-1]["close"])
+
+        option1 = lowest_low * 0.98
+        option2 = prev_close * (1 - capital_sl_pct)
+
+        calculated_sl = max(option1, option2)
+
+    else:
+        # ===============================
+        # NORMAL LOGIC
+        # ===============================
+        highest_close = float(t10["close"].max())
+        sl1 = highest_close * (1 - capital_sl_pct)
+
+        below_ema = t10[t10["low"] < t10["ema20"]]
+
+        if not below_ema.empty:
+            if previous_low is not None:
+                structure_low = max(previous_low, float(below_ema["low"].min()))
+            else:
+                structure_low = float(below_ema["low"].min())
+
+            sl2 = structure_low * (1 - structure_sl_pct)
+            calculated_sl = max(sl1, sl2)
+        else:
+            calculated_sl = sl1
+
+    # ===============================
+    # NO SL DOWNGRADE
+    # ===============================
+    if previous_sl:
         final_sl = max(calculated_sl, previous_sl)
     else:
         final_sl = calculated_sl
@@ -341,32 +404,47 @@ def calculate_sl_t10_ema20(
     latest_close = float(df.iloc[-1]["close"])
     latest_low = float(df.iloc[-1]["low"])
 
-    # =====================================================
-    # E-SL LOGIC
-    # =====================================================
+    # ===============================
+    # PRO E-SL
+    # ===============================
     e_sl = previous_e_sl if previous_e_sl else 0
 
-    if final_sl > latest_close:
-        # First activation
-        if not previous_e_sl:
-            e_sl = latest_low * 0.98
+    activation_zone = latest_close <= final_sl * 1.02
+
+    if activation_zone or previous_e_sl > 0:
+
+        recent = df.tail(3)
+
+        if len(recent) < 3:
+            return {
+                "final_sl": final_sl,
+                "e_sl": 0,
+                "latest_low": latest_low
+            }
+
+        recent_low = float(recent["low"].min())
+
+        if previous_e_sl == 0:
+            e_sl = recent_low * 0.98
         else:
-            # Trail only upward
-            if previous_low is not None and latest_low > previous_low:
-                e_sl = max(latest_low * 0.98, previous_e_sl)
+            if previous_low is None or recent_low > previous_low:
+                e_sl = max(previous_e_sl, recent_low * 0.98)
 
-        # Revert if E-SL crosses SL
+        e_sl = min(e_sl, latest_close * 0.995)
+
         if e_sl > final_sl:
-            e_sl = 0
+            e_sl = previous_e_sl
+
     else:
-        e_sl = 0
+        e_sl = previous_e_sl
 
-    log.info(f"[SL CALC SUCCESS] {final_sl=}, {e_sl=}, {latest_low=}, latest_close={latest_close}")
-
+    # ===============================
+    # FINAL OUTPUT
+    # ===============================
     return {
-        "final_sl": round(float(final_sl), 1),
-        "e_sl": round(float(e_sl), 1),
-        "latest_low": round(float(latest_low), 1),
+        "final_sl": round(final_sl, 1),
+        "e_sl": round(e_sl, 1),
+        "latest_low": round(latest_low, 1),
     }
 
 
@@ -409,20 +487,26 @@ def calculate_supertrend(high, low, close, period=10, multiplier=2):
 
     # Trend
     supertrend = pd.Series(index=close.index, dtype=float)
-    trend = pd.Series(index=close.index, dtype=int)
+    trend = pd.Series(0, index=close.index, dtype=int)
+    trend.iloc[0] = 1   # ✅ initialize first trend
 
     for i in range(1, len(close)):
+
+        prev_trend = trend.iloc[i-1]
+
         if close.iloc[i] > final_upper.iloc[i-1]:
             trend.iloc[i] = 1
+
         elif close.iloc[i] < final_lower.iloc[i-1]:
             trend.iloc[i] = -1
-        else:
-            trend.iloc[i] = trend.iloc[i-1]
 
-            if trend.iloc[i] == 1 and final_lower.iloc[i] < final_lower.iloc[i-1]:
+        else:
+            trend.iloc[i] = prev_trend
+
+            if prev_trend == 1 and final_lower.iloc[i] < final_lower.iloc[i-1]:
                 final_lower.iloc[i] = final_lower.iloc[i-1]
 
-            if trend.iloc[i] == -1 and final_upper.iloc[i] > final_upper.iloc[i-1]:
+            if prev_trend == -1 and final_upper.iloc[i] > final_upper.iloc[i-1]:
                 final_upper.iloc[i] = final_upper.iloc[i-1]
 
         if trend.iloc[i] == 1:

@@ -12,6 +12,35 @@ import requests
 import datetime as dt
 from kiteconnect import KiteConnect, KiteTicker
 
+lock_file ="/tmp/hedge.lock"
+if os.path.exists(lock_file):
+    print(" Hedge Already Running. Removing stale lock...")
+    try:
+        os.remove(lock_file)
+    except:
+        sys.exit()
+open(lock_file, "w").close()
+from flask import Flask, request
+
+app = Flask(__name__)
+
+SECRET_KEY = "BigShotsCapital_06"   # change this
+
+@app.route("/token")
+def get_token():
+    try:
+        if request.args.get("key") != SECRET_KEY:
+            return "Unauthorized", 403
+
+        with open("/root/access_token.txt") as f:
+            return f.read().strip()
+    except Exception as e:
+        return str(e), 500
+
+
+def start_token_server():
+    app.run(host="0.0.0.0", port=5000, threaded=True)
+
 
 # =====================================================
 
@@ -83,9 +112,13 @@ def get_kite():
 
     except Exception as e:
         print("⚠️ Token failed:", e)
+        send_telegram("❌ Token Failed. Trying to auto login...")
 
     # ===== 2. AUTO LOGIN =====
     print("🔄 Running auto_login.py...")
+    msg = "🔄 Running auto login..."
+    print(msg)
+    send_telegram(msg)
 
     subprocess.run([
         "/root/tradingenv/bin/python",
@@ -158,6 +191,9 @@ def run_1045(kite):
 
 
     print("\n========== 10:45 ENGINE START ==========\n")
+    msg = "🚀 10:45 Engine Started"
+    print(msg)
+    send_telegram(msg)
 
     positions = kite.positions()["net"]
 
@@ -206,6 +242,9 @@ def run_1045(kite):
                 trigger = round_to_tick(prev_high + buffer, tick_size)
                 limit_price = round_to_tick(trigger + 0.2, tick_size)
                 print(f"{symbol} SHORT SL -> BUY @ {limit_price}")
+                msg = f"🔻 SHORT SL: {symbol} BUY @ {limit_price}"
+                print(msg)
+                send_telegram(msg)
                 if qty <= 0:
                     continue
                 kite.place_order(
@@ -224,6 +263,9 @@ def run_1045(kite):
                 trigger = round_to_tick(prev_low - buffer, tick_size)
                 limit_price = round_to_tick(trigger - 0.1, tick_size)
                 print(f"{symbol} LONG SL -> SELL @ {limit_price}")
+                msg = f"🔺 LONG SL: {symbol} SELL @ {limit_price}"
+                print(msg)
+                send_telegram(msg)
                 if qty <= 0:
                     continue
                 kite.place_order(
@@ -341,9 +383,15 @@ def run_1045(kite):
 
                     kite.place_order(**params)
                     print(f"{symbol} order placed")
+                    msg = f"✅ Order Placed: {symbol}"
+                    print(msg)
+                    send_telegram(msg)
 
                 except Exception as e:
                     print(f"{symbol} error:", e)
+                    msg = f"❌ Order Failed: {symbol} | {e}"
+                    print(msg)
+                    send_telegram(msg)
 
                 
             executed["done"] = True
@@ -365,7 +413,7 @@ def run_1045(kite):
             break
         except Exception as e:
             print("WebSocket connection error, retrying..", e)
-            time.sleep(5)
+            time.sleep(10)
 
 
 
@@ -378,64 +426,90 @@ def run_1045(kite):
 
 def run_1655(kite):
 
-
     print("\n========== 16:55 HEDGE START ==========\n")
+
     try:
         send_telegram("🚀 16:55 Hedge Started")
-    except Exception as e:
+    except:
         pass
 
-
-    positions = kite.positions()["net"]
-    if not positions:
-        print("No positions for hedge")
+    # ===== FETCH POSITIONS =====
+    try:
+        positions = kite.positions()["net"]
+    except Exception as e:
+        print("Error fetching positions:", e)
         return
-    instruments = kite.instruments("NFO")
 
-    valid_positions = [p for p in positions if p["exchange"] == "NFO" and "FUT" in p["tradingsymbol"]]
+    if not positions:
+        msg = "⚠️ No positions for hedge"
+        print(msg)
+        send_telegram(msg)
+        return
+
+    # ===== FETCH INSTRUMENTS =====
+    try:
+        instruments = kite.instruments("NFO")
+    except Exception as e:
+        print("Error fetching instruments:", e)
+        return
+
+    # ===== FILTER FUTURES ONLY =====
+    valid_positions = [
+        p for p in positions
+        if p["exchange"] == "NFO" and "FUT" in p["tradingsymbol"] and p["quantity"] != 0
+    ]
 
     if not valid_positions:
-        print("No FUT positions for hedging")
-        send_telegram("⚠️ No FUT positions for hedge")
+        msg = "⚠️ No FUT positions for hedge"
+        print(msg)
+        send_telegram(msg)
         return
 
+    # =========================================================
+    # ================= MAIN LOOP ==============================
+    # =========================================================
     for pos in valid_positions:
 
-        if pos["quantity"] == 0:
-            continue
-
-        underlying = next(
-            (i["name"] for i in instruments if i["tradingsymbol"] == pos["tradingsymbol"]),
-            None
-            )
-    
+        underlying = pos["tradingsymbol"].split("FUT")[0]
 
         if not underlying:
             continue
 
-        matching = [i for i in instruments if i["name"] == underlying]
+        # ===== GET ALL OPTIONS =====
+        matching = [
+            i for i in instruments
+            if i["name"] == underlying and i["segment"] == "NFO-OPT"
+        ]
 
         if not matching:
+            print(f"No options found for {underlying}")
             continue
 
         strikes = sorted(set(i["strike"] for i in matching if i["strike"] > 0))
-        if not strikes:
+
+        if len(strikes) < 2:
+            print(f"Strike issue for {underlying}")
             continue
-        
+
         step = strikes[1] - strikes[0]
 
+        # ===== GET SPOT PRICE =====
         try:
             spot = kite.ltp(f"NSE:{underlying}")
             if not spot:
-                continue 
+                print(f"Spot not found for {underlying}")
+                continue
+
             spot_price = list(spot.values())[0]["last_price"]
-            
 
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Spot error: {underlying} {e}")
             continue
 
+        # ===== FIND ATM =====
         atm = round(spot_price / step) * step
+
+        # ===== OPTION TYPE =====
         option_type = "PE" if pos["quantity"] > 0 else "CE"
 
         selected = [
@@ -444,30 +518,37 @@ def run_1655(kite):
         ]
 
         if not selected:
+            print(f"No ATM option found for {underlying}")
             continue
 
-        option_symbol = selected[0]["tradingsymbol"]
+        option = selected[0]
+        option_symbol = option["tradingsymbol"]
         qty = abs(pos["quantity"])
 
+        # ===== GET OPTION LTP =====
         try:
             quote = kite.ltp([f"NFO:{option_symbol}"])
+
             if f"NFO:{option_symbol}" not in quote:
                 print(f"LTP missing for {option_symbol}")
                 continue
+
             ltp = quote[f"NFO:{option_symbol}"]["last_price"]
+
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"LTP error: {option_symbol} {e}")
             continue
 
+        # ===== PRICE CALC =====
         price = round_to_tick(ltp * 1.01, 0.05)
-        print(f"Placing hedge → {option_symbol} | Qty: {qty} | LTP: {ltp} | Price: {price}")
-        try:
-            send_telegram(f"⚡ Hedge Order: {option_symbol} | Qty: {qty}")
-        except Exception as e:
-            print(f"Telegram error (entry): {e}")
 
-        
+        msg = f"⚡ Hedge Placing: {option_symbol} | Qty: {qty} | LTP: {ltp} | Price: {price}"
+        print(msg)
+        send_telegram(msg)
 
+        # =====================================================
+        # ================ ORDER FUNCTION =====================
+        # =====================================================
         def place_order_safe():
             try:
                 kite.place_order(
@@ -481,52 +562,120 @@ def run_1655(kite):
                     price=price
                 )
 
-                print(f"✅ Hedge placed: {option_symbol}")
-
-                # ✅ SAFE TELEGRAM (non-blocking safe)
-                try:
-                    send_telegram(f"✅ Hedge placed: {option_symbol}")
-                except Exception as te:
-                    print(f"Telegram error (success msg): {te}")
+                success_msg = f"✅ Hedge placed: {option_symbol}"
+                print(success_msg)
+                send_telegram(success_msg)
 
             except Exception as e:
-                print(f"❌ Hedge error: {option_symbol} {e}")
-
-                # ✅ SAFE TELEGRAM (error case)
-                try:
-                    send_telegram(f"❌ Hedge error: {option_symbol}")
-                except Exception as te:
-                    print(f"Telegram error (error msg): {te}")
-
+                error_msg = f"❌ Hedge error: {option_symbol} | {e}"
+                print(error_msg)
+                send_telegram(error_msg)
 
         # ===== THREAD EXECUTION =====
         t = threading.Thread(target=place_order_safe)
-        t.daemon = True   # ✅ ensures no zombie threads
         t.start()
-
-        t.join(timeout=5)
+        t.join(timeout=3)
 
         # ===== TIMEOUT HANDLING =====
         if t.is_alive():
-            print(f"⏳ Timeout placing: {option_symbol}")
+            msg = f"⚠️ Timeout placing: {option_symbol}"
+            print(msg)
+            send_telegram(msg)
 
-            try:
-                send_telegram(f"⚠️ Timeout placing: {option_symbol}")
-            except Exception as te:
-                print(f"Telegram error (timeout): {te}")
-
-            # ✅ DO NOT wait further → move to next
-            # thread will auto-kill because daemon=True
-
-        # ===== API RATE SAFETY =====
+        # ===== API SAFETY =====
         time.sleep(0.5)
 
-    print("✅ 16:55 Hedge Completed")
+    # =====================================================
+    # ================= COMPLETION ========================
+    # =====================================================
+    msg = "✅ 16:55 Hedge Completed"
+    print(msg)
+    send_telegram(msg)
+
     try:
         send_telegram("✅ Hedge Execution Completed")
     except:
         pass
 
+
+def send_positions_snapshot(kite):
+    try:
+        positions = kite.positions()["net"]
+
+        msg = "📊 OPEN POSITIONS:\n\n"
+
+        has_pos = False
+
+        for pos in positions:
+            if pos["quantity"] != 0 and pos["exchange"] == "NFO":
+                has_pos = True
+                msg += f"{pos['tradingsymbol']} | Qty: {pos['quantity']}\n"
+
+        if not has_pos:
+            msg += "No open positions"
+
+        send_telegram(msg)
+
+    except Exception as e:
+        print("Snapshot error:", e)
+
+
+def damage_control(kite):
+    print("Running Damage Control...")
+    msg = "🛡 Running Damage Control..."
+    print(msg)
+    send_telegram(msg)
+
+    positions = kite.positions()["net"]
+
+    for pos in positions:
+
+        if pos["exchange"] != "NFO":
+            continue
+
+        # Only check hedge options
+        if not pos["tradingsymbol"].endswith(("CE", "PE")):
+            continue
+
+        qty = abs(pos["quantity"])
+
+        # If hedge order not executed (qty still 0 or mismatch)
+        if abs(pos["quantity"]) > 0:
+            symbol = pos["tradingsymbol"]
+
+            try:
+                quote = kite.ltp(f"NFO:{symbol}")
+                if f"NFO:{symbol}" not in quote:
+                    continue
+
+                ltp = quote[f"NFO:{symbol}"]["last_price"]
+
+                price = round(ltp + 0.5, 2)
+
+                print(f"⚠️ Replacing order: {symbol} @ {price}")
+                msg = f"⚠️ Replacing Order: {symbol} @ {price}"
+                print(msg)
+                send_telegram(msg)
+
+                kite.place_order(
+                    tradingsymbol=symbol,
+                    exchange="NFO",
+                    transaction_type="BUY",
+                    quantity= abs(pos["quantity"]),
+                    order_type="LIMIT",
+                    product="NRML",
+                    variety="regular",
+                    price=price
+                )
+
+                send_telegram(f"⚠️ Damage Control Order: {symbol} @ {price}")
+
+            except Exception as e:
+                print(f"Damage control error: {symbol} {e}")
+                msg = f"❌ Damage Control Failed: {symbol} | {e}"
+                print(msg)
+                send_telegram(msg)
+                
 
 # =====================================================
 
@@ -564,12 +713,18 @@ def scheduler():
 
     executed_1045 = False
     executed_1655 = False
+    damage_done = False
 
     print("\n🚀 BOT STARTED (Bangkok Time)\n")
+    msg = "🚀 Hedge Bot Started (VM Running)"
+    print(msg)
+    send_telegram(msg)
 
+
+    snapshot_1030_sent = False
+    snapshot_1645_sent = False
     printed_1045_missed = False
     printed_1655_wait = False
-
     while True:
         try:
             kite.profile()
@@ -578,18 +733,30 @@ def scheduler():
             kite = get_kite()
 
         now = dt.datetime.now().time()
+        # ===== SEND POSITIONS SNAPSHOT =====
+        if now.hour == 10 and now.minute == 30 and now.second < 20 and not snapshot_1030_sent:            
+            send_positions_snapshot(kite)
+            snapshot_1030_sent = True
+
+        if now.hour == 16 and now.minute == 45 and now.second < 20 and not snapshot_1645_sent:            
+            send_positions_snapshot(kite)
+            snapshot_1645_sent = True
+
 
         if not (
             dt.time(10, 45) <= now <= dt.time(11, 30)
             or dt.time(16, 55) <= now <= dt.time(17, 15)):
-            time.sleep(5)
+            time.sleep(10)
             continue
 
-        
 
         #=============== 10:45=========================
         if dt.time(10, 45) <= now <= dt.time(11, 0) and not executed_1045:
             print("\n⏰ Executing 10:45 Exit\n")
+            msg = "⏰ Executing 10:45 Exit"
+            print(msg)
+            send_telegram(msg)
+
             run_1045(kite)
             executed_1045 = True
         elif now > dt.time(11, 0) and not executed_1045 and not printed_1045_missed:
@@ -597,8 +764,12 @@ def scheduler():
             printed_1045_missed = True
 
         #=============== 16:55=========================
-        if dt.time(16, 55) <= now <= dt.time(17, 0) and not executed_1655:
+        if now >= dt.time(16, 55) and not executed_1655:
             print("\n⏰ Executing 16:55 Hedge\n")
+            msg = "⏰ Executing 16:55 Hedge"
+            print(msg)
+            send_telegram(msg)
+
             run_1655(kite)
             executed_1655 = True
         elif now < dt.time(16, 55) and not executed_1655 and not printed_1655_wait:
@@ -607,16 +778,24 @@ def scheduler():
         elif now > dt.time(17, 5) and not executed_1655:
             print("\n Market closed \n")
 
+        # ===== DAMAGE CONTROL =====
+        if now.hour == 16 and now.minute >= 57 and not damage_done:
+            damage_control(kite)
+            damage_done = True
 
+        
         # reset next day
         if now.hour == 0 and now.minute == 1:
             executed_1045 = False
             executed_1655 = False
             printed_1045_missed = False
             printed_1655_wait = False
+            snapshot_1030_sent = False
+            snapshot_1645_sent = False
+            damage_done = False
 
 
-        time.sleep(5)
+        time.sleep(10)
 
 
 # =====================================================
@@ -626,4 +805,19 @@ def scheduler():
 # =====================================================
 
 if __name__ == "__main__":
-    scheduler()
+
+    try:
+        # 🔥 START TOKEN SERVER IN BACKGROUND
+        server_thread = threading.Thread(target=start_token_server)
+        server_thread.daemon = True
+        server_thread.start()
+
+        print("🌐 Token server running on port 5000")
+
+        scheduler()
+    finally:
+        if os.path.exists(lock_file):
+            os.remove(lock_file)
+
+# =====================================================
+
