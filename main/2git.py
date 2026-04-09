@@ -103,8 +103,7 @@ def commit_and_push(mode):
         print("✅ No changes to commit.")
         return
 
-    # ✅ Backup before commit
-    create_backup()
+   
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -125,6 +124,9 @@ def commit_and_push(mode):
         if version in out.splitlines():
             print("❌ Tag already exists!")
             return
+
+        # ✅ BACKUP ONLY HERE
+        create_backup()
 
         commit_msg = f"Version update {version}"
 
@@ -188,9 +190,9 @@ if __name__ == "__main__":
     ensure_gitignore()
 
     print("\nChoose mode:")
-    print("1 → Update only")
-    print("2 → Update with version tag")
+    print("Enter 1 → Update only")
+    print("Enter 2 → Update with version tag")
 
-    choice = input("Enter option (1/2): ").strip()
+    choice = input("Enter option 1 or2: ").strip()
 
     commit_and_push(choice)

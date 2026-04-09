@@ -20,26 +20,26 @@ if os.path.exists(lock_file):
     except:
         sys.exit()
 open(lock_file, "w").close()
-from flask import Flask, request
+#from flask import Flask, request
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
-SECRET_KEY = "BigShotsCapital_06"   # change this
+#SECRET_KEY = "BigShotsCapital_06"   # change this
 
-@app.route("/token")
-def get_token():
-    try:
-        if request.args.get("key") != SECRET_KEY:
-            return "Unauthorized", 403
+#@app.route("/token")
+#def get_token():
+    #try:
+        #if request.args.get("key") != SECRET_KEY:
+            #return "Unauthorized", 403
 
-        with open("/root/access_token.txt") as f:
-            return f.read().strip()
-    except Exception as e:
-        return str(e), 500
+        #with open("/root/access_token.txt") as f:
+            #return f.read().strip()
+    #except Exception as e:
+        #return str(e), 500
 
 
-def start_token_server():
-    app.run(host="0.0.0.0", port=5000, threaded=True)
+#def start_token_server():
+    #app.run(host="0.0.0.0", port=5000, threaded=True)
 
 
 # =====================================================
@@ -89,7 +89,7 @@ MARKET_END = dt.time(17, 0, 0)
 # LOGIN
 
 # =====================================================
-
+ 
 def get_kite():
     from kiteconnect import KiteConnect
     import subprocess
@@ -120,10 +120,10 @@ def get_kite():
     print(msg)
     send_telegram(msg)
 
-    subprocess.run([
-        "/root/tradingenv/bin/python",
-        "/root/auto_login.py"
-    ])
+    #subprocess.run([
+        #"/root/tradingenv/bin/python",
+        #"/root/auto_login.py"
+    #])
 
     time.sleep(3)
 
@@ -132,7 +132,7 @@ def get_kite():
         token = load_token()
         kite.set_access_token(token)
         kite.profile()
-        print("✅ Login successful (auto refreshed token)")
+        print("✅ Hedge Login successful (auto refreshed token)")
         send_telegram("🔄 Bot Auto Login Successful (New Token)")
         return kite
 
@@ -640,7 +640,7 @@ def damage_control(kite):
         qty = abs(pos["quantity"])
 
         # If hedge order not executed (qty still 0 or mismatch)
-        if abs(pos["quantity"]) > 0:
+        if abs(pos["quantity"]) == 0:
             symbol = pos["tradingsymbol"]
 
             try:
@@ -684,7 +684,10 @@ def damage_control(kite):
 # =====================================================
 
 def scheduler():
-
+    msg = f"Current time check: {dt.datetime.now()}"
+    print(msg)
+    send_telegram(msg)
+    send_telegram("✅ Hedge Scheduler Loop Running")
 
     kite = get_kite()
 
@@ -715,7 +718,7 @@ def scheduler():
     executed_1655 = False
     damage_done = False
 
-    print("\n🚀 BOT STARTED (Bangkok Time)\n")
+    print("\n🚀 Option Hedge BOT STARTED (Bangkok Time)\n")
     msg = "🚀 Hedge Bot Started (VM Running)"
     print(msg)
     send_telegram(msg)
@@ -808,11 +811,11 @@ if __name__ == "__main__":
 
     try:
         # 🔥 START TOKEN SERVER IN BACKGROUND
-        server_thread = threading.Thread(target=start_token_server)
-        server_thread.daemon = True
-        server_thread.start()
+        #server_thread = threading.Thread(target=start_token_server)
+        #server_thread.daemon = True
+        #server_thread.start()
 
-        print("🌐 Token server running on port 5000")
+        #print("🌐 Token server running on port 5000")
 
         scheduler()
     finally:

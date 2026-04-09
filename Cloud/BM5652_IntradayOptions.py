@@ -7,6 +7,30 @@ from kiteconnect import KiteConnect
 from kiteconnect import KiteTicker
 from kiteconnect.exceptions import TokenException
 
+from datetime import datetime
+import pytz
+
+first_candle_done = False
+
+def debug_time():
+    
+
+    # Timezones
+    utc = pytz.utc
+    ist = pytz.timezone("Asia/Kolkata")
+    bkk = pytz.timezone("Asia/Bangkok")
+
+    # Current times
+    utc_now = datetime.now(utc)
+    ist_now = utc_now.astimezone(ist)
+    bkk_now = utc_now.astimezone(bkk)
+
+    print(f"UTC: {utc_now}")
+    print(f"IST: {ist_now}")
+    print(f"BKK: {bkk_now}")
+
+
+
 
 
 # =====================================================
@@ -21,6 +45,7 @@ ACCESS_TOKEN_FILE = "/root/access_token.txt"
 
 positions_closed = False
 instruments_nfo = []
+last_trade_time = {}
 
 LOG_DIR = os.path.join(BASE_DIR, "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
@@ -55,9 +80,10 @@ def send_telegram(msg):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     data = {"chat_id": CHAT_ID, "text": msg}
     try:
-        requests.post(url, data=data, timeout=3)
-    except Exception as e:
-        print("Telegram Error:", e)
+        requests.post(url, data=data, timeout=5)
+    except:
+        pass
+
 
 last_trade_time = {}
 # ==========================================
@@ -75,9 +101,9 @@ token_map = {}
 
 # ================= HELPER FUNCTIONS =================
 
-def get_30min_candles(token):
+def get_30min_candles(symbol):
     data = kite.historical_data(
-        token,
+        symbol,
         datetime.now() - timedelta(days=5),
         datetime.now(),
         "30minute"
@@ -87,7 +113,10 @@ def get_30min_candles(token):
 
 
 def candle_condition(df):
-    c0 = df.iloc[-2]
+    if len(df) < 3:
+        return False, False
+
+    c0 = df.iloc[-2]   # latest completed candle
     c1 = df.iloc[-3]
 
     close = c0["close"]
@@ -97,92 +126,106 @@ def candle_condition(df):
 
     prev_close = c1["close"]
 
-    # % change
     pct_change = ((close - prev_close) / prev_close) * 100
 
-    # wick ratios
     range_ = high - low if high != low else 1
-
-    lower_wick = (open_ - low) / range_
-    upper_wick = (high - close) / range_
 
     bullish = (
         pct_change <= 1.3 and
         close > open_ and
-        (lower_wick <= 0.1 or upper_wick <= 0.1)
+        ((open_ - low) / range_ <= 0.1 or (high - close) / range_ <= 0.1)
     )
 
     bearish = (
         pct_change >= -1.3 and
         close < open_ and
-        (
-            ((close - low) / range_) <= 0.1 or
-            ((high - open_) / range_) <= 0.1
-        )
+        ((close - low) / range_ <= 0.1 or (high - open_) / range_ <= 0.1)
     )
 
     return bullish, bearish
 
+
 def place_order(tradingsymbol, transaction, qty):
-    quote = kite.ltp(f"NFO:{tradingsymbol}")
-    ltp = quote[f"NFO:{tradingsymbol}"]["last_price"]
 
-    if "NIFTY" in tradingsymbol or "BANKNIFTY" in tradingsymbol:
-        buffer = 2
-    else:
-        buffer = 0.2
+    symbol = str(tradingsymbol)
 
+    try:
+        quote = kite.ltp([f"NFO:{symbol}"])
+        ltp = quote.get(f"NFO:{symbol}", {}).get("last_price")
+    except:
+        ltp = None
+
+    if not ltp:
+        print(f"LTP missing for {symbol}")
+        return
+
+    buffer = 2 if ("NIFTY" in symbol or "BANKNIFTY" in symbol) else 0.2
     price = ltp + buffer if transaction == "BUY" else ltp - buffer
 
-    kite.place_order(
-        variety=kite.VARIETY_REGULAR,
-        exchange=kite.EXCHANGE_NFO,
-        tradingsymbol=tradingsymbol,
-        transaction_type=transaction,
-        quantity=qty,
-        order_type="LIMIT",
-        price=round(price, 2),
-        product=kite.PRODUCT_NRML
-    )
+    # ================= DEMO MODE =================
+    if DEMO_MODE:
+        msg = f"""
+🟡 DEMO ORDER
 
-def cancel_existing_sl(symbol):
-    orders = kite.orders()
+{transaction} {symbol}
+Qty: {qty}
+Price: {round(price,2)}
+"""
+        print(msg)
+        send_telegram(msg)
+        return
 
-    for o in orders:
-        if o["tradingsymbol"] == symbol and o["order_type"] == "SL":
-            try:
-                kite.cancel_order(variety=o["variety"], order_id=o["order_id"])
-            except:
-                pass
+    # ================= LIVE MODE =================
+    try:
+        kite.place_order(
+            variety="regular",
+            exchange="NFO",
+            tradingsymbol=symbol,
+            transaction_type=transaction,
+            quantity=qty,
+            order_type="LIMIT",
+            price=round(price, 2),
+            product="NRML"
+        )
 
-def place_sl(tradingsymbol, qty,trigger,limit, transaction):
+        msg = f"✅ LIVE ORDER {transaction} {symbol} @ {round(price,2)}"
+        print(msg)
+        send_telegram(msg)
 
-    kite.place_order(
-        variety=kite.VARIETY_REGULAR,
-        exchange=kite.EXCHANGE_NFO,
-        tradingsymbol=tradingsymbol,
-        transaction_type=transaction,
-        quantity=qty,
-        order_type="SL",
-        price=round(limit,2),
-        trigger_price=round(trigger,2),
-        product=kite.PRODUCT_NRML
-    )
+    except Exception as e:
+        print(f"Order error {symbol}: {e}")
 
 
-def place_sl_entry(tradingsymbol, qty, trigger, limit, transaction):
+def modify_sl_order(sl_order, new_sl):
 
-    kite.place_order(
-        variety=kite.VARIETY_REGULAR,
-        exchange=kite.EXCHANGE_NFO,
-        tradingsymbol=tradingsymbol,
-        transaction_type=transaction,
-        quantity=qty,
-        order_type="SL",
-        price=round(limit, 2),
-        trigger_price=round(trigger, 2),
-        product=kite.PRODUCT_NRML
-    )
+    symbol = sl_order["tradingsymbol"]
+
+    if DEMO_MODE:
+        msg = f"""
+🟡 DEMO SL MODIFY
+
+{symbol}
+Old SL: {sl_order.get('trigger_price')}
+New SL: {round(new_sl,2)}
+"""
+        print(msg)
+        send_telegram(msg)
+        return
+
+    try:
+        kite.modify_order(
+            variety=sl_order["variety"],
+            order_id=sl_order["order_id"],
+            trigger_price=round(new_sl, 2),
+            price=round(new_sl, 2)
+        )
+
+        print(f"SL UPDATED {symbol} → {new_sl}")
+        send_telegram(f"🔄 SL UPDATED {symbol} → {round(new_sl,2)}")
+
+    except Exception as e:
+        print(f"SL modify error {symbol}: {e}")
+
 
 
 def get_atm_option(kite, instruments, underlying, option_type):
@@ -190,6 +233,7 @@ def get_atm_option(kite, instruments, underlying, option_type):
 
     today = dt.datetime.now().date()
 
+    # ================= EXPIRY =================
     expiries = sorted(set(
         i["expiry"] for i in instruments
         if i["name"] == underlying and i["segment"] == "NFO-OPT"
@@ -198,40 +242,69 @@ def get_atm_option(kite, instruments, underlying, option_type):
     if not expiries:
         return None
 
-    from datetime import timedelta
-
-    # Default expiry
     expiry = expiries[0]
 
-    # If near expiry (<= 2 days), shift to next expiry
+    # 👉 shift expiry if near expiry (<=2 days)
     if (expiry - today).days <= 2 and len(expiries) > 1:
         expiry = expiries[1]
 
+    # ================= OPTIONS =================
     options = [
         i for i in instruments
         if i["name"] == underlying
         and i["expiry"] == expiry
         and i["instrument_type"] == option_type
     ]
-    
+
     if not options:
         return None
 
+    # ================= STRIKE STEP =================
     strikes = sorted(set(i["strike"] for i in options))
-    if len(strikes) < 2:
+    if not strikes:
         return None
-    step = min([strikes[i+1] - strikes[i] for i in range(len(strikes)-1)])
 
+    step = strikes[1] - strikes[0] if len(strikes) > 1 else 50
+
+    # ================= SPOT =================
     symbol = underlying
     spot = live_prices.get(symbol)
 
-    if spot is None:
-        quote = kite.ltp(f"NSE:{symbol}")
-        spot = quote[f"NSE:{symbol}"]["last_price"]
+    if not spot:
+        # ===== FIX FOR INDEX =====
+        if symbol == "NIFTY":
+            key = "NSE:NIFTY 50"
+        elif symbol == "BANKNIFTY":
+            key = "NSE:NIFTY BANK"
+        else:
+            key = f"NSE:{symbol}"
 
+        try:
+            quote = kite.ltp([key])
 
+            # SAFE HANDLING
+            if not isinstance(quote, dict):
+                print(f"Invalid quote for {symbol} → {quote}")
+                return None
+
+            spot_data = quote.get(key)
+            if not spot_data:
+                print(f"Spot missing for {symbol}")
+                return None
+
+            spot = spot_data.get("last_price")
+            if spot is None:
+                print(f"No last_price for {symbol}")
+                return None
+
+        except Exception as e:
+            print(f"Spot fetch failed for {symbol}: {e}")
+            return None
+
+    # ================= ATM CALC =================
     atm = round(spot / step) * step
 
+    # ================= CLOSEST STRIKE =================
     closest = min(options, key=lambda x: abs(x["strike"] - atm))
 
     return closest
@@ -264,187 +337,235 @@ def get_position(positions, symbol):
             return p
     return None
 
+def calculate_sl_15min(token, direction, symbol):
+        buffer = 2 if ("NIFTY" in symbol or "BANKNIFTY" in symbol) else 0.2
+
+        df15 = pd.DataFrame(kite.historical_data(
+            token,
+            datetime.now() - timedelta(days=2),
+            datetime.now(),
+            "15minute"
+        ))
+
+        if df15 is None or len(df15) < 2:
+            return None
+
+        prev = df15.iloc[-2]
+
+        if direction == "BUY":
+            return prev["low"] - buffer
+        else:
+            return prev["high"] + buffer
+
+
+def calculate_sl_30min(df, direction, symbol):
+        buffer = 2 if ("NIFTY" in symbol or "BANKNIFTY" in symbol) else 0.2
+
+        if len(df) < 5:
+            return None
+
+        c3 = df.iloc[-4]
+        c2 = df.iloc[-3]
+        c1 = df.iloc[-2]
+
+        today = datetime.now().date()
+        if not (c3["date"].date() == today and c2["date"].date() == today and c1["date"].date() == today):
+            return None
+
+        if direction == "BUY":
+            lows = [c3["low"], c2["low"], c1["low"]]
+
+            # tight range
+            if max(lows) - min(lows) < 1:
+                return min(lows) - buffer
+
+            # expansion
+            return max(c2["low"], c1["low"]) - buffer
+
+        else:
+            highs = [c3["high"], c2["high"], c1["high"]]
+
+            if max(highs) - min(highs) < 1:
+                return max(highs) + buffer
+
+            return max(c2["high"], c1["high"]) + buffer
+
+
 # ================= MAIN LOOP =================
 
 
 def run_strategy():
-    now = datetime.now().time()
 
-    # 🚫 No new trades after 16:45
-    if now >= datetime.strptime("16:45", "%H:%M").time():
-        print("⛔ Trade cutoff reached (16:45). Skipping new trades.")
-        return
+    def get_ltp(symbol):
+        try:
+            q = kite.ltp([f"NFO:{symbol}"])
+            data = q.get(f"NFO:{symbol}")
+            if data:
+                return data.get("last_price")
+        except:
+            return None
 
-    global instruments_nfo
-    instruments = instruments_nfo
-    positions = kite.positions()["net"]
+    def get_qty(symbol):
+        try:
+            positions = kite.positions()["net"]
+            for p in positions:
+                if p["tradingsymbol"] == symbol:
+                    return abs(p["quantity"])
+        except:
+            return 0
+        return 0
 
-    index_map = {
-        "NIFTY": "NSE:NIFTY 50",
-        "BANKNIFTY": "NSE:NIFTY BANK"
-    }
+    
+    
 
     for sym in SYMBOLS:
         try:
-            print(f"\n🔎 Checking {sym} at {datetime.now()}")
+            now_str = datetime.now().strftime('%H:%M')
+            print(f"Checking {sym}")
+            send_telegram(f"⏱ Checking {sym} at {now_str}")
 
-            # ===== CONFIG =====
-            if sym in ["NIFTY", "BANKNIFTY"]:
-                trigger_buffer = 1
-                base_limit = 2
-                high_limit = 5
+            # ================= SPOT =================
+            if sym == "NIFTY":
+                key = "NSE:NIFTY 50"
+            elif sym == "BANKNIFTY":
+                key = "NSE:NIFTY BANK"
             else:
-                trigger_buffer = 0.10
-                base_limit = 0.20
-                high_limit = 0.50
+                key = f"NSE:{sym}"
 
-            # =====================================================
-            # 🔥 GET UNDERLYING CANDLES
-            # =====================================================
-            instrument = next((i for i in instruments if i["tradingsymbol"] == sym), None)
-
-            if instrument:
-                df = get_30min_candles(instrument["instrument_token"])
-            elif sym in index_map:
-                df = pd.DataFrame(kite.historical_data(
-                    index_map[sym],
-                    datetime.now() - timedelta(days=5),
-                    datetime.now(),
-                    "30minute"
-                ))
-            else:
+            quote = kite.ltp([key])
+            spot_data = quote.get(key)
+            if not spot_data:
                 continue
+
+            # ================= TOKEN =================
+            if sym == "NIFTY":
+                token = next((i["instrument_token"] for i in nse_instruments if i["name"] == "NIFTY 50"), None)
+            elif sym == "BANKNIFTY":
+                token = next((i["instrument_token"] for i in nse_instruments if i["name"] == "NIFTY BANK"), None)
+            else:
+                token = nse_map.get(sym)
+
+            if not token:
+                continue
+
+            # ================= OHLC =================
+            df = pd.DataFrame(kite.historical_data(
+                token,
+                datetime.now() - timedelta(days=5),
+                datetime.now(),
+                "30minute"
+            ))
 
             if df is None or len(df) < 3:
                 continue
 
-            # ===== LAST COMPLETED CANDLE =====
-            candle = df.iloc[-2]
-            candle_time = candle["date"].strftime("%H:%M")
-
-            print(f"📊 {sym} Candle {candle_time} | O:{candle['open']} H:{candle['high']} L:{candle['low']} C:{candle['close']}")
-
-            if DEMO_MODE:
-                send_telegram(
-                    f"{sym} | {candle_time}\n"
-                    f"O:{candle['open']} H:{candle['high']} L:{candle['low']} C:{candle['close']}"
-                )
-
-            # ===== SIGNAL =====
             bullish, bearish = candle_condition(df)
-            print(f"{sym} → Bullish: {bullish}, Bearish: {bearish}")
 
-            # =====================================================
-            # 🔥 GET ATM OPTIONS
-            # =====================================================
-            ce = get_atm_option(kite, instruments, sym, "CE")
-            pe = get_atm_option(kite, instruments, sym, "PE")
+            if not bullish and not bearish:
+                continue
+
+            # ================= OPTIONS =================
+            ce = get_atm_option(kite, instruments_nfo, sym, "CE")
+            pe = get_atm_option(kite, instruments_nfo, sym, "PE")
 
             if not ce or not pe:
                 continue
 
-            qty = ce["lot_size"]
-
             ce_symbol = ce["tradingsymbol"]
             pe_symbol = pe["tradingsymbol"]
 
-            ce_token = ce["instrument_token"]
-            pe_token = pe["instrument_token"]
-
-            # =====================================================
-            # 🔥 OPTION DATA
-            # =====================================================
             ce_df = pd.DataFrame(kite.historical_data(
-                ce_token,
+                ce["instrument_token"],
                 datetime.now() - timedelta(days=2),
                 datetime.now(),
                 "30minute"
             ))
 
             pe_df = pd.DataFrame(kite.historical_data(
-                pe_token,
+                pe["instrument_token"],
                 datetime.now() - timedelta(days=2),
                 datetime.now(),
                 "30minute"
             ))
 
-            if len(ce_df) < 3 or len(pe_df) < 3:
+            if len(ce_df) < 5 or len(pe_df) < 5:
                 continue
 
-            ce_last = ce_df.iloc[-2]
-            pe_last = pe_df.iloc[-2]
+            # ================= QTY =================
+            ce_qty = get_qty(ce_symbol)
+            pe_qty = get_qty(pe_symbol)
 
-            ce_prev1, ce_prev2 = ce_df.iloc[-2], ce_df.iloc[-3]
-            pe_prev1, pe_prev2 = pe_df.iloc[-2], pe_df.iloc[-3]
-
-            # ===== DEBUG OPTION CANDLES =====
-            print(f"📈 CE {ce_symbol} → O:{ce_last['open']} H:{ce_last['high']} L:{ce_last['low']} C:{ce_last['close']}")
-            print(f"📉 PE {pe_symbol} → O:{pe_last['open']} H:{pe_last['high']} L:{pe_last['low']} C:{pe_last['close']}")
-
-            if DEMO_MODE:
-                send_telegram(f"📈 {ce_symbol} O:{ce_last['open']} H:{ce_last['high']} L:{ce_last['low']} C:{ce_last['close']}")
-                send_telegram(f"📉 {pe_symbol} O:{pe_last['open']} H:{pe_last['high']} L:{pe_last['low']} C:{pe_last['close']}")
-
-            # ===== POSITIONS =====
-            ce_pos = get_position(positions, ce_symbol)
-            pe_pos = get_position(positions, pe_symbol)
-
-            total_ce_qty = qty + abs(ce_pos.get("quantity", 0)) if ce_pos else qty
-            total_pe_qty = qty + abs(pe_pos.get("quantity", 0)) if pe_pos else qty
-
-            ce_limit_buffer = high_limit if total_ce_qty >= 3 * qty else base_limit
-            pe_limit_buffer = high_limit if total_pe_qty >= 3 * qty else base_limit
-
-            # =====================================================
-            # ===================== BULLISH =========================
-            # =====================================================
+            # ================= SL LOGIC =================
             if bullish:
-                print(f"{sym} BULLISH")
 
-                ce_trigger = ce_last["high"] + trigger_buffer
-                pe_trigger = pe_last["low"] - trigger_buffer
-
-                if DEMO_MODE:
-                    send_telegram(f"{sym} BULLISH → BUY CE / SELL PE")
+                # BUY CE
+                if ce_qty >= 3:
+                    ce_sl = calculate_sl_15min(ce["instrument_token"], "BUY", ce_symbol)
                 else:
-                    place_sl_entry(ce_symbol, qty, ce_trigger, ce_trigger + ce_limit_buffer, "BUY")
-                    place_sl_entry(pe_symbol, qty, pe_trigger, pe_trigger - pe_limit_buffer, "SELL")
+                    ce_sl = calculate_sl_30min(ce_df, "BUY", ce_symbol)
 
-            # =====================================================
-            # ===================== BEARISH =========================
-            # =====================================================
-            elif bearish:
-                print(f"{sym} BEARISH")
-
-                pe_trigger = pe_last["low"] - trigger_buffer
-                ce_trigger = ce_last["high"] + trigger_buffer
-
-                if DEMO_MODE:
-                    send_telegram(f"{sym} BEARISH → BUY PE / SELL CE")
+                # SELL PE
+                if pe_qty >= 3:
+                    pe_sl = calculate_sl_15min(pe["instrument_token"], "SELL", pe_symbol)
                 else:
-                    place_sl_entry(pe_symbol, qty, pe_trigger, pe_trigger - pe_limit_buffer, "BUY")
-                    place_sl_entry(ce_symbol, qty, ce_trigger, ce_trigger + ce_limit_buffer, "SELL")
+                    pe_sl = calculate_sl_30min(pe_df, "SELL", pe_symbol)
+
+            else:
+
+                # BUY PE
+                if pe_qty >= 3:
+                    pe_sl = calculate_sl_15min(pe["instrument_token"], "BUY", pe_symbol)
+                else:
+                    pe_sl = calculate_sl_30min(pe_df, "BUY", pe_symbol)
+
+                # SELL CE
+                if ce_qty >= 3:
+                    ce_sl = calculate_sl_15min(ce["instrument_token"], "SELL", ce_symbol)
+                else:
+                    ce_sl = calculate_sl_30min(ce_df, "SELL", ce_symbol)
+
+            # ================= LTP =================
+            ce_ltp = get_ltp(ce_symbol)
+            pe_ltp = get_ltp(pe_symbol)
+
+            # ================= MESSAGE =================
+            if bullish:
+                msg = f"""
+{sym} BULLISH
+
+BUY CE: {ce_symbol} @ {round(ce_ltp,2) if ce_ltp else '-'}
+SL: {round(ce_sl,2) if ce_sl else '-'}
+
+SELL PE: {pe_symbol} @ {round(pe_ltp,2) if pe_ltp else '-'}
+SL: {round(pe_sl,2) if pe_sl else '-'}
+"""
+            else:
+                msg = f"""
+{sym} BEARISH
+
+BUY PE: {pe_symbol} @ {round(pe_ltp,2) if pe_ltp else '-'}
+SL: {round(pe_sl,2) if pe_sl else '-'}
+
+SELL CE: {ce_symbol} @ {round(ce_ltp,2) if ce_ltp else '-'}
+SL: {round(ce_sl,2) if ce_sl else '-'}
+"""
+
+            print(msg)
+            send_telegram(msg)
 
         except Exception as e:
-            print(f"❌ Error in {sym}: {e}")
+            print(f"Error {sym}: {e}")
 
 
 def wait_for_next_candle():
     while True:
         now = datetime.now()
 
-        # Anchor at 11:15
-        base = now.replace(hour=11, minute=15, second=0, microsecond=0)
+        base = now.replace(hour=9, minute=15, second=0, microsecond=0)
 
-        # If before 11:15 → wait for it
-        if now < base:
-            next_candle = base
-        else:
-            # Calculate next 1-hour interval from 11:15
-            delta_hours = int((now - base).total_seconds() // 3600) + 1
-            next_candle = base + timedelta(hours=delta_hours)
+        mins = int((now - base).total_seconds() // 1800)
+        next_candle = base + timedelta(minutes=30 * (mins + 1))
 
-        # Time left
         seconds_left = int((next_candle - now).total_seconds())
         minutes_left = (seconds_left + 59) // 60
 
@@ -454,7 +575,7 @@ def wait_for_next_candle():
             print("New candle started")
             break
 
-        time.sleep(60)
+        time.sleep(30)
 
 # ================= RUN =================
 
@@ -503,22 +624,31 @@ def wait_for_first_candle():
 
 
 def close_all_positions():
-    print("🔴 Closing all positions (16:50)...")
-    send_telegram("🔴 Closing ALL positions (16:50)")
-    closed_symbols = set()
+    print("🔴 Closing all OPTION positions (16:50)...")
+    send_telegram("🔴 Closing ALL OPTION positions (16:50)")
 
+    closed_symbols = set()
     positions = kite.positions()["net"]
 
     for pos in positions:
         try:
+            # ✅ ONLY NFO OPTIONS (skip FUT)
             if pos["exchange"] != "NFO":
+                continue
+
+            symbol = str(pos["tradingsymbol"])
+
+            # ❌ SKIP FUTURES
+            if "FUT" in symbol:
+                continue
+
+            # ✅ ONLY OPTIONS (extra safety)
+            if not ("CE" in symbol or "PE" in symbol):
                 continue
 
             qty = pos["quantity"]
             if qty == 0:
                 continue
-
-            symbol = pos["tradingsymbol"]
 
             if symbol in closed_symbols:
                 continue
@@ -526,13 +656,30 @@ def close_all_positions():
             closed_symbols.add(symbol)
 
             # ===== GET LTP =====
-            quote = kite.ltp(f"NFO:{symbol}")
-            ltp = quote[f"NFO:{symbol}"]["last_price"]
+            try:
+                quote = kite.ltp([f"NFO:{symbol}"])
+                key = f"NFO:{symbol}"
 
-            if "NIFTY" in symbol or "BANKNIFTY" in symbol:
-                buffer = 2
-            else:
-                buffer = 0.2
+                if not isinstance(quote, dict):
+                    print(f"Invalid LTP response for {symbol}")
+                    continue
+
+                ltp_data = quote.get(key)
+                if not ltp_data:
+                    print(f"LTP missing for {symbol}")
+                    continue
+
+                ltp = ltp_data.get("last_price")
+                if ltp is None:
+                    print(f"No last_price for {symbol}")
+                    continue
+
+            except Exception as e:
+                print(f"LTP error {symbol}: {e}")
+                continue
+
+            # ===== PRICE =====
+            buffer = 2 if ("NIFTY" in symbol or "BANKNIFTY" in symbol) else 0.2
 
             if qty > 0:
                 transaction = "SELL"
@@ -541,6 +688,7 @@ def close_all_positions():
                 transaction = "BUY"
                 price = ltp + buffer
 
+            # ===== ORDER =====
             kite.place_order(
                 variety="regular",
                 exchange="NFO",
@@ -552,18 +700,26 @@ def close_all_positions():
                 product=pos.get("product", "NRML"),
             )
 
-            print(f"Closed {symbol} @ {price}")
+            print(f"Closed OPTION {symbol} @ {round(price,2)}")
+            send_telegram(f"Closed OPTION {symbol} @ {round(price,2)}")
 
         except Exception as e:
             print(f"Error closing {symbol}: {e}")
 
 
 def damage_control():
+    pass
+
+
+
+def trailing_sl_engine():
+
     try:
         positions = kite.positions()["net"]
         orders = kite.orders()
 
         for pos in positions:
+
             if pos["exchange"] != "NFO":
                 continue
 
@@ -572,13 +728,34 @@ def damage_control():
                 continue
 
             symbol = pos["tradingsymbol"]
+            direction = "BUY" if qty > 0 else "SELL"
 
-            # ===== GET LTP =====
-            quote = kite.ltp(f"NFO:{symbol}")
-            ltp = quote[f"NFO:{symbol}"]["last_price"]
+            # ===== GET TOKEN =====
+            token = None
+            for i in instruments_nfo:
+                if i["tradingsymbol"] == symbol:
+                    token = i["instrument_token"]
+                    break
 
-            # ===== FIND EXISTING SL =====
-            
+            if not token:
+                continue
+
+            # ===== CALCULATE NEW SL =====
+            if abs(qty) >= 3:
+                new_sl = calculate_sl_15min(token, direction, symbol)
+            else:
+                df = pd.DataFrame(kite.historical_data(
+                    token,
+                    datetime.now() - timedelta(days=2),
+                    datetime.now(),
+                    "30minute"
+                ))
+                new_sl = calculate_sl_30min(df, direction, symbol)
+
+            if new_sl is None:
+                continue
+
+            # ===== FIND SL ORDER =====
             sl_order = None
 
             for o in orders:
@@ -593,143 +770,226 @@ def damage_control():
             if not sl_order:
                 continue
 
-            # ===== DAMAGE CONTROL LOGIC =====
-            if qty > 0:
-                # BUY POSITION → SL below price
-                new_trigger = ltp - 1
-                new_limit = new_trigger - 0.2
+            old_sl = sl_order.get("trigger_price")
 
-                if new_trigger > sl_order["trigger_price"]:
-                    if abs(new_trigger - sl_order["trigger_price"]) > 0.5:
-
-                        kite.modify_order(
-                            variety=sl_order["variety"],
-                            order_id=sl_order["order_id"],
-                            trigger_price=round(new_trigger, 2),
-                            price=round(new_limit, 2)
-                        )
-
-                        print(f"Updated SL BUY {symbol} → {new_trigger}")
-                        send_telegram(f"🛡 SL Updated BUY {symbol} → {round(new_trigger,2)}")
+            # ===== ONLY MOVE FORWARD =====
+            if direction == "BUY":
+                if new_sl <= old_sl:
+                    continue
             else:
-                # SELL POSITION → SL above price
-                new_trigger = ltp + 1
-                new_limit = new_trigger + 0.2
+                if new_sl >= old_sl:
+                    continue
 
-                if new_trigger < sl_order["trigger_price"]:
-                    if abs(new_trigger - sl_order["trigger_price"]) > 0.5:
-
-                        kite.modify_order(
-                            variety=sl_order["variety"],
-                            order_id=sl_order["order_id"],
-                            trigger_price=round(new_trigger, 2),
-                            price=round(new_limit, 2)
-                        )
-
-                        print(f"Updated SL SELL {symbol} → {new_trigger}")
-                        send_telegram(f"🛡 SL Updated SELL {symbol} → {round(new_trigger,2)}")
+            # ===== APPLY =====
+            modify_sl_order(sl_order, new_sl)
 
     except Exception as e:
-        print("Damage control error:", e)
+        print("Trailing SL error:", e)
 
 
+def emergency_sl_check():
+
+    try:
+        positions = kite.positions()["net"]
+        orders = kite.orders()
+
+        for pos in positions:
+
+            if pos["exchange"] != "NFO":
+                continue
+
+            qty = pos["quantity"]
+            if qty == 0:
+                continue
+
+            symbol = pos["tradingsymbol"]
+
+            # ===== GET LTP =====
+            try:
+                quote = kite.ltp([f"NFO:{symbol}"])
+                ltp = quote.get(f"NFO:{symbol}", {}).get("last_price")
+            except:
+                continue
+
+            if not ltp:
+                continue
+
+            # ===== FIND SL ORDER =====
+            sl_order = None
+
+            for o in orders:
+                if (
+                    o["tradingsymbol"] == symbol
+                    and o["order_type"] == "SL"
+                    and o["status"] == "OPEN"
+                ):
+                    sl_order = o
+                    break
+
+            if not sl_order:
+                continue
+
+            sl_price = sl_order.get("trigger_price")
+
+            if not sl_price:
+                continue
+
+            # ================= EMERGENCY CONDITION =================
+
+            # BUY POSITION
+            if qty > 0 and ltp < sl_price:
+
+                print(f"🚨 EMERGENCY EXIT BUY {symbol}")
+                send_telegram(f"🚨 EMERGENCY EXIT BUY {symbol}")
+
+                # Cancel old SL
+                if not DEMO_MODE:
+                    kite.cancel_order(
+                        variety=sl_order["variety"],
+                        order_id=sl_order["order_id"]
+                    )
+
+                # Place exit order
+                exit_price = ltp - 1
+
+                if DEMO_MODE:
+                    send_telegram(f"🟡 DEMO EXIT SELL {symbol} @ {round(exit_price,2)}")
+                else:
+                    kite.place_order(
+                        variety="regular",
+                        exchange="NFO",
+                        tradingsymbol=symbol,
+                        transaction_type="SELL",
+                        quantity=abs(qty),
+                        order_type="LIMIT",
+                        price=round(exit_price, 2),
+                        product=pos.get("product", "NRML"),
+                    )
+
+            # SELL POSITION
+            elif qty < 0 and ltp > sl_price:
+
+                print(f"🚨 EMERGENCY EXIT SELL {symbol}")
+                send_telegram(f"🚨 EMERGENCY EXIT SELL {symbol}")
+
+                # Cancel old SL
+                if not DEMO_MODE:
+                    kite.cancel_order(
+                        variety=sl_order["variety"],
+                        order_id=sl_order["order_id"]
+                    )
+
+                # Place exit order
+                exit_price = ltp + 1
+
+                if DEMO_MODE:
+                    send_telegram(f"🟡 DEMO EXIT BUY {symbol} @ {round(exit_price,2)}")
+                else:
+                    kite.place_order(
+                        variety="regular",
+                        exchange="NFO",
+                        tradingsymbol=symbol,
+                        transaction_type="BUY",
+                        quantity=abs(qty),
+                        order_type="LIMIT",
+                        price=round(exit_price, 2),
+                        product=pos.get("product", "NRML"),
+                    )
+
+    except Exception as e:
+        print("Emergency SL error:", e)
+
+
+# ================= MAIN =================
 if __name__ == "__main__":
-    send_telegram("✅ Intraday Bot Ready")
 
-    # WAIT UNTIL 10:40
-    wait_for_market_start()
-    send_telegram("🔐 Logging in and preparing...")
+    now_vm = datetime.now()
+    msg = f"""🚀 Intraday Options Bot Started
 
-    # Load tokens
-    spot_instruments = kite.instruments("NSE")
-    for ins in spot_instruments:
-        if ins["tradingsymbol"] in SYMBOLS:
-            token_map[ins["instrument_token"]] = ins["tradingsymbol"]
+    VM Time: {now_vm.strftime('%Y-%m-%d %H:%M:%S')}
+    """
 
-    if not token_map:
-        print("No tokens loaded → exiting")
-        exit()
+    print(msg)
+    send_telegram(msg)
+    debug_time()
 
-    # Start websocket
+    nse_instruments = kite.instruments("NSE")
+    nse_map = {i["tradingsymbol"]: i["instrument_token"] for i in nse_instruments}
+
+    for i in kite.instruments("NSE"):
+        if i["tradingsymbol"] in SYMBOLS:
+            token_map[i["instrument_token"]] = i["tradingsymbol"]
+
+    instruments_nfo = kite.instruments("NFO")
+
     kws = KiteTicker(API_KEY, kite.access_token)
-    kws.on_ticks = on_ticks
-    kws.on_connect = on_connect
+    kws.on_ticks = lambda ws, ticks: None
+    kws.on_connect = lambda ws, res: ws.subscribe(list(token_map.keys()))
     kws.connect(threaded=True)
 
     time.sleep(5)
 
-    send_telegram("🚀 Intraday Bot Started")
-
-    last_damage_check = 0
-    positions_closed = False
-
-    # Load instruments
-    instruments_nfo = kite.instruments("NFO")
-
-    # 🔥 Track last execution candle
     last_execution_candle = None
+
+
+    ist = pytz.timezone("Asia/Kolkata")
+    now_ist = datetime.now(ist)
+
+    if now_ist.time() > datetime.strptime("09:45", "%H:%M").time():
+        first_candle_done = True
 
     while True:
 
-        ensure_session()
 
-        # Refresh instruments every 30 min
-        if int(time.time()) % 1800 < 2:
-            instruments_nfo = kite.instruments("NFO")
 
-        now_dt = datetime.now()
-        now = now_dt.time()
+        now_ist = datetime.now(ist)
 
-        # 🔴 FORCE EXIT AT 16:50
-        if now >= datetime.strptime("16:50", "%H:%M").time() and not positions_closed:
-            close_all_positions()
-            positions_closed = True
-            print("🛑 Positions closed. Stopping bot.")
-            send_telegram("🛑 Intraday Bot Stopped (Day End)")
-            break
-
-        # 🛡 DAMAGE CONTROL (every 60 sec)
-        if time.time() - last_damage_check > 60:
-            damage_control()
-            last_damage_check = time.time()
-
-        # ⛔ NO TRADES AFTER 16:45
-        if now >= datetime.strptime("16:45", "%H:%M").time():
+        if now_ist.time() < datetime.strptime("09:15", "%H:%M").time():
             time.sleep(30)
             continue
 
-        # =====================================================
-        # 🔥 CORRECT 30-MIN CANDLE LOGIC (KEY FIX)
-        # =====================================================
-        base = now_dt.replace(hour=9, minute=15, second=0, microsecond=0)
+        if now_ist.time() > datetime.strptime("15:10", "%H:%M").time():
+            print("Stopping bot (EOD)")
+            break
 
-        if now_dt < base:
-            next_candle = base
-        else:
-            minutes_passed = int((now_dt - base).total_seconds() // 1800)
-            next_candle = base + timedelta(minutes=30 * (minutes_passed + 1))
+        minute = now_ist.minute
+        second = now_ist.second
+        hour = now_ist.hour
 
-        current_candle = next_candle - timedelta(minutes=30)
+        # ===== FIRST CANDLE =====
+        if not first_candle_done:
 
-        print(f"🕒 Current Candle: {current_candle.strftime('%H:%M')} | Now: {now_dt.strftime('%H:%M:%S')}")
+            if hour == 9 and minute == 45 and second >= 5:
 
-        # =====================================================
-        # 🔥 EXECUTE ONCE PER CANDLE (BULLETPROOF)
-        # =====================================================
-        if last_execution_candle != current_candle:
+                print("🔥 First candle ready")
+                send_telegram("🔥 First Candle Ready")
 
-            print(f"🚀 New Candle Detected: {current_candle.strftime('%H:%M')}")
+                run_strategy()
 
-            send_telegram(f"🧠 Running strategy at {now_dt.strftime('%H:%M:%S')}")
-            send_telegram(f"⏱ Checking signals for candle {current_candle.strftime('%H:%M')}")
+                first_candle_done = True
+                last_execution_candle = "FIRST"
 
-            run_strategy()
+        # ===== NORMAL EXECUTION =====
+        elif minute % 30 == 15 and 5 <= second <= 15:
 
-            last_execution_candle = current_candle
+            current_candle = now_ist.replace(second=0, microsecond=0)
+
+            if last_execution_candle != current_candle:
+
+                print(f"⏱ Running strategy {current_candle}")
+                send_telegram(f"⏱ Running IST {current_candle}")
+
+                run_strategy()
+
+                last_execution_candle = current_candle
+
+        trailing_sl_engine()
+
+        # run emergency check every 60 sec
+        if int(time.time()) % 60 < 5:
+            emergency_sl_check()
 
         time.sleep(5)
-
-
     
 
         
